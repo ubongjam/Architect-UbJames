@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Weld Symbol Guide</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                        "card-dark": "#192233",
+                        "input-dark": "#232f48",
+                        "text-muted": "#92a4c9"
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: "Space Grotesk", sans-serif;
+        }
+        .symbol-stroke {
+            stroke: #135bec;
+            stroke-width: 2;
+            fill: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+    </style>
+    <link rel="stylesheet" href="assets/site.css"/>
+    </head>
+<body class="bg-background-light dark:bg-background-dark text-white min-h-screen">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
+<!-- TopAppBar -->
+<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-50 border-b border-primary/10">
+<div class="text-primary flex size-12 shrink-0 items-center justify-start cursor-pointer">
+<span class="material-symbols-outlined text-[24px]">arrow_back</span>
+</div>
+<h2 class="text-black dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Weld Symbol Guide</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 bg-transparent text-primary gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0">
+<span class="material-symbols-outlined text-[24px]">info</span>
+</button>
+</div>
+</div>
+<!-- SearchBar -->
+<div class="px-4 py-3">
+<label class="flex flex-col min-w-40 h-12 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-text-muted flex border-none bg-white dark:bg-input-dark items-center justify-center pl-4 rounded-l-lg border-r-0">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-lg text-black dark:text-white focus:outline-0 focus:ring-1 focus:ring-primary border-none bg-white dark:bg-input-dark focus:border-none h-full placeholder:text-text-muted px-4 pl-2 text-base font-normal leading-normal" placeholder="Search weld types or symbols..." value=""/>
+</div>
+</label>
+</div>
+<!-- Anatomy Interactive Section -->
+<div class="p-4 @container">
+<div class="flex flex-col items-stretch justify-start rounded-xl @xl:flex-row @xl:items-start shadow-xl bg-white dark:bg-card-dark border border-primary/5">
+<div class="w-full relative aspect-[16/9] flex items-center justify-center p-6 bg-primary/5 rounded-t-xl @xl:rounded-l-xl @xl:rounded-tr-none">
+<!-- Placeholder SVG representation of a technical diagram -->
+<svg class="w-full h-full max-w-[300px]" viewbox="0 0 200 100">
+<!-- Reference Line -->
+<line class="text-black dark:text-white" stroke="currentColor" stroke-width="2" x1="40" x2="160" y1="50" y2="50"></line>
+<!-- Arrow -->
+<line class="text-black dark:text-white" stroke="currentColor" stroke-width="2" x1="160" x2="190" y1="50" y2="80"></line>
+<polygon class="text-black dark:text-white" fill="currentColor" points="190,80 182,74 186,84"></polygon>
+<!-- Tail -->
+<polyline class="text-black dark:text-white" fill="none" points="40,50 20,35 40,50 20,65" stroke="currentColor" stroke-width="2"></polyline>
+<!-- Hotspots -->
+<circle class="fill-primary animate-pulse" cx="100" cy="50" r="4"></circle>
+<circle class="fill-primary" cx="30" cy="50" r="4"></circle>
+<circle class="fill-primary" cx="175" cy="65" r="4"></circle>
+</svg>
+<div class="absolute bottom-2 right-2 text-[10px] text-text-muted uppercase tracking-widest font-bold">Standard AWS Diagram</div>
+</div>
+<div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-1 py-4 px-4">
+<p class="text-black dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Anatomy of a Weld Symbol</p>
+<p class="text-text-muted text-sm font-normal leading-normal">Standard ANSI/AWS reference line, tail, and arrow elements. Tap nodes to explore data placement.</p>
+</div>
+</div>
+</div>
+<!-- SectionHeader: Common Weld Types -->
+<div class="flex items-center justify-between px-4 pt-4">
+<h3 class="text-black dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Common Weld Types</h3>
+<span class="text-primary text-xs font-bold uppercase tracking-wider">A-Z</span>
+</div>
+<!-- List Items -->
+<div class="flex flex-col divide-y divide-gray-100 dark:divide-primary/10 mt-2 px-2">
+<!-- Fillet Weld -->
+<div class="flex items-center gap-4 bg-transparent hover:bg-white dark:hover:bg-card-dark transition-colors px-4 min-h-[80px] py-3 justify-between rounded-xl">
+<div class="flex items-center gap-4">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-14 border border-primary/20">
+<svg class="symbol-stroke" height="32" viewbox="0 0 32 32" width="32">
+<path d="M8 8V24H24L8 8Z"></path>
+</svg>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-black dark:text-white text-base font-bold leading-normal">Fillet Weld</p>
+<p class="text-text-muted text-sm font-normal leading-snug">For T-joints, lap joints, and corner joints.</p>
+</div>
+</div>
+<div class="shrink-0">
+<span class="material-symbols-outlined text-text-muted text-[24px]">chevron_right</span>
+</div>
+</div>
+<!-- Groove Welds (V, Bevel) -->
+<div class="flex items-center gap-4 bg-transparent hover:bg-white dark:hover:bg-card-dark transition-colors px-4 min-h-[80px] py-3 justify-between rounded-xl">
+<div class="flex items-center gap-4">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-14 border border-primary/20">
+<svg class="symbol-stroke" height="32" viewbox="0 0 32 32" width="32">
+<path d="M8 8L16 24L24 8"></path>
+</svg>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-black dark:text-white text-base font-bold leading-normal">V-Groove Weld</p>
+<p class="text-text-muted text-sm font-normal leading-snug">Butt joints requiring full penetration.</p>
+</div>
+</div>
+<div class="shrink-0">
+<span class="material-symbols-outlined text-text-muted text-[24px]">chevron_right</span>
+</div>
+</div>
+<!-- Plug/Slot -->
+<div class="flex items-center gap-4 bg-transparent hover:bg-white dark:hover:bg-card-dark transition-colors px-4 min-h-[80px] py-3 justify-between rounded-xl">
+<div class="flex items-center gap-4">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-14 border border-primary/20">
+<svg class="symbol-stroke" height="32" viewbox="0 0 32 32" width="32">
+<rect height="12" width="16" x="8" y="10"></rect>
+<line x1="8" x2="24" y1="16" y2="16"></line>
+</svg>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-black dark:text-white text-base font-bold leading-normal">Plug / Slot Weld</p>
+<p class="text-text-muted text-sm font-normal leading-snug">Circular or elongated hole filling.</p>
+</div>
+</div>
+<div class="shrink-0">
+<span class="material-symbols-outlined text-text-muted text-[24px]">chevron_right</span>
+</div>
+</div>
+<!-- Surface -->
+<div class="flex items-center gap-4 bg-transparent hover:bg-white dark:hover:bg-card-dark transition-colors px-4 min-h-[80px] py-3 justify-between rounded-xl">
+<div class="flex items-center gap-4">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-14 border border-primary/20">
+<svg class="symbol-stroke" height="32" viewbox="0 0 32 32" width="32">
+<path d="M8 20C8 20 12 12 16 12C20 12 24 20 24 20"></path>
+</svg>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-black dark:text-white text-base font-bold leading-normal">Surface / Backing</p>
+<p class="text-text-muted text-sm font-normal leading-snug">Built-up surfaces or root reinforcement.</p>
+</div>
+</div>
+<div class="shrink-0">
+<span class="material-symbols-outlined text-text-muted text-[24px]">chevron_right</span>
+</div>
+</div>
+</div>
+<!-- Bottom Navigation Bar (iOS Style) -->
+<div class="mt-auto border-t border-primary/10 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md pb-8 pt-2">
+<div class="flex justify-around items-center">
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="text-[10px] font-bold uppercase">Guide</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-text-muted">
+<span class="material-symbols-outlined">calculate</span>
+<span class="text-[10px] font-bold uppercase">Tools</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-text-muted">
+<span class="material-symbols-outlined">layers</span>
+<span class="text-[10px] font-bold uppercase">Materials</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-text-muted">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-[10px] font-bold uppercase">Settings</span>
+</button>
+</div>
+</div>
+</div>
+<script src="assets/nav-loader.js"></script>
+</body></html>

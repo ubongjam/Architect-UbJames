@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Engineering Careers Board</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+    </style>
+    <link rel="stylesheet" href="assets/site.css"/>
+    </head>
+<body class="bg-background-light dark:bg-background-dark text-[#0d121b] dark:text-white font-display">
+<!-- Top Navigation Bar -->
+<nav class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+<div class="flex items-center p-4 justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">architecture</span>
+<h1 class="text-[#0d121b] dark:text-white text-xl font-bold leading-tight tracking-tight">Engineering Careers</h1>
+</div>
+<div class="flex gap-2">
+<button class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="pb-24">
+<!-- Search Section -->
+<div class="px-4 py-3 space-y-3">
+<label class="flex flex-col w-full">
+<div class="flex w-full items-stretch rounded-xl h-12 bg-white dark:bg-gray-800 shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden">
+<div class="text-gray-400 dark:text-gray-500 flex items-center justify-center pl-4">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="w-full bg-transparent border-none focus:ring-0 text-base px-3 placeholder:text-gray-400" placeholder="Job titles, companies..." value=""/>
+</div>
+</label>
+<label class="flex flex-col w-full">
+<div class="flex w-full items-stretch rounded-xl h-12 bg-white dark:bg-gray-800 shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden">
+<div class="text-gray-400 dark:text-gray-500 flex items-center justify-center pl-4">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<input class="w-full bg-transparent border-none focus:ring-0 text-base px-3 placeholder:text-gray-400" placeholder="Location (City, State or Zip)" value=""/>
+</div>
+</label>
+</div>
+<!-- Filter Chips -->
+<div class="flex gap-3 px-4 py-2 overflow-x-auto no-scrollbar">
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary text-white px-4 shadow-sm">
+<span class="text-sm font-semibold">Structural</span>
+<span class="material-symbols-outlined text-lg">expand_more</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 px-4">
+<span class="text-sm font-medium">Detailing</span>
+<span class="material-symbols-outlined text-lg text-gray-400">expand_more</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 px-4">
+<span class="text-sm font-medium">Full-time</span>
+<span class="material-symbols-outlined text-lg text-gray-400">expand_more</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 px-4">
+<span class="text-sm font-medium">Remote</span>
+<span class="material-symbols-outlined text-lg text-gray-400">expand_more</span>
+</button>
+</div>
+<!-- Featured Companies Section -->
+<div class="pt-6">
+<h3 class="text-[#0d121b] dark:text-white text-lg font-bold px-4 mb-4">Featured Steel Firms</h3>
+<div class="flex w-full overflow-x-auto no-scrollbar px-4 gap-6">
+<div class="flex flex-col items-center gap-2 min-w-[72px]">
+<div class="w-16 h-16 bg-white dark:bg-gray-800 shadow-sm border border-gray-200 dark:border-gray-700 rounded-full flex items-center justify-center bg-cover" data-alt="Steel fabrication company logo" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDAgQNUyYCF37xxNfK3-QNBNll-ByGdc8zL25Mer7RGAa_iOqmJy4KkaXS1YHr1S4_dP-4LAL6QM0Z_HcUCADEd4tjDwpIASkzYdgSKikKMzCoWdCep6E-3PbMLOfwNa7h-Sb4dAeZNhwmqSTGE1s_FKICYFoL336KfmoauDDdtAiQF1s_hQU0rRuFmdpHCKeK56MQMpEMyxJLXC1kVWUVu1MAGW9ZP6Occ-AHyjamqahF-yvMN6jNBIHdpXKfNKtCvhOIMhJfP8WM")'></div>
+<p class="text-[12px] font-medium text-center truncate w-full">Steel Fab</p>
+</div>
+<div class="flex flex-col items-center gap-2 min-w-[72px]">
+<div class="w-16 h-16 bg-white dark:bg-gray-800 shadow-sm border border-gray-200 dark:border-gray-700 rounded-full flex items-center justify-center bg-cover" data-alt="Structural design institute logo" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDQXI0BM8rJUOpQFx2GRFH1ktCRwLvPybVDARWANhc6KL--IUpr3N-Y2YYynXHcQozcBWVh0kkLSPElyTlDFk6Mox5ft1kZmvZ0bLXYgUXwb_5QbusajqyV_z_87tUclTxG-ZaKxFCa-kWbtr18pX1uLCaD6kf-zeMITCWnzhsP8HKTeZYs-8mWxMHiADMTywYI_Pk3e4hUb_cFPe-Oh99Oen7SxufYE7ZmL11LEKCC5LxhJFGRDV0uEtRytc7KLjLVJFRv4xnb9Pc")'></div>
+<p class="text-[12px] font-medium text-center truncate w-full">SDI</p>
+</div>
+<div class="flex flex-col items-center gap-2 min-w-[72px]">
+<div class="w-16 h-16 bg-white dark:bg-gray-800 shadow-sm border border-gray-200 dark:border-gray-700 rounded-full flex items-center justify-center bg-cover" data-alt="Iron works manufacturing logo" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA5gLonwQ5Zr4rP9f9LFY77H51_3S1wc2KTpDzbSjUR8HIj75ELuoMZjqpfTTLcX-OLipCHl6oN17lMyrcRfEPCjYzcS3BJYwrJOqULEvQ9Sn3aAiYyS_zk__-Jv-tmb6O7ktYEMIr-DME8jetXS7QdF1Do1mlAD7Tjg0kgw7rvvgRVH2MLXxCT_uk6-fq7bfo74WLQKEDy6AUp9912MkW1kq-lKFhmWvBXpQAYaPJT-WT0PnVnNHwV-pet-4b003zNPeYqgDuaq5U")'></div>
+<p class="text-[12px] font-medium text-center truncate w-full">IronWorks</p>
+</div>
+<div class="flex flex-col items-center gap-2 min-w-[72px]">
+<div class="w-16 h-16 bg-white dark:bg-gray-800 shadow-sm border border-gray-200 dark:border-gray-700 rounded-full flex items-center justify-center bg-cover" data-alt="Metal technology solutions logo" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA_s5gRtLubXZOlFerrej6bak4wqHwCWAvI3UpXSp5WdG2mOU51t0U4c1ndcSxXQAF8DMmimI17UyDzazsjj5IqqAf5M1MJJUQ49a9Z7wlXWabvs-_Nf5UDMyah65G1LBsjwTBb2lGgi6cguQ3nL9JHwJ__XKEFC_GJfEdKWAZqCzdkRHSB_LunLM0U3931te_-LWSWRXHtL6SWyxK5D0LxCAWf__X14YcuHd2scbAkW8mSVTdHlxgrPHEnAmhLmdohgEfdbQ_AmuA")'></div>
+<p class="text-[12px] font-medium text-center truncate w-full">MetalTech</p>
+</div>
+<div class="flex flex-col items-center gap-2 min-w-[72px]">
+<div class="w-16 h-16 bg-white dark:bg-gray-800 shadow-sm border border-gray-200 dark:border-gray-700 rounded-full flex items-center justify-center bg-cover" data-alt="American institute of steel construction logo" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBNkzfT7lPqE8Dgj_wC4uFdFhiEdgOgcauOaGqLYadK2N5c7VY74q4LqDvSzz9L-ti8fCA_Jh8wnwlw6gm-MbjTRPwmPJyb2bjCr5XpH6qmlGQaf1W8kxoSEfAS7ol1nBJDqedljz5GKrHmECXwqWtjsTlJoaI5zO-mCp1B_4NiUA54LyBKxJlC1xERdm_offGRC6XHu-UILGXJS-cilIxbmvSmIfm5ywwY0loiMaoCmno6qYiMiO0kEgospkaEsXNx72HwFhlVaZI")'></div>
+<p class="text-[12px] font-medium text-center truncate w-full">AISC</p>
+</div>
+</div>
+</div>
+<!-- Job Feed -->
+<div class="px-4 py-8 space-y-4">
+<h3 class="text-[#0d121b] dark:text-white text-lg font-bold mb-2">Recommended for You</h3>
+<!-- Job Card 1 -->
+<div class="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 space-y-4">
+<div class="flex justify-between items-start">
+<div class="flex gap-4">
+<div class="w-12 h-12 bg-blue-50 dark:bg-blue-900/30 rounded-lg flex items-center justify-center border border-blue-100 dark:border-blue-800">
+<span class="material-symbols-outlined text-primary">engineering</span>
+</div>
+<div>
+<h4 class="font-bold text-lg text-primary leading-tight">Senior Structural Engineer</h4>
+<p class="text-sm font-medium text-gray-600 dark:text-gray-400">IronEdge Engineering</p>
+</div>
+</div>
+<button class="text-gray-400">
+<span class="material-symbols-outlined">bookmark</span>
+</button>
+</div>
+<div class="flex flex-wrap gap-y-2 gap-x-4 text-sm text-gray-500 dark:text-gray-400">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-base">location_on</span>
+                        Chicago, IL
+                    </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-base">payments</span>
+                        $95k - $130k
+                    </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-base">schedule</span>
+                        2 days ago
+                    </div>
+</div>
+<div class="flex gap-2 pt-2">
+<button class="flex-1 bg-primary text-white font-bold py-2.5 rounded-lg text-sm">Quick Apply</button>
+<button class="px-4 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-600 dark:text-gray-300">
+<span class="material-symbols-outlined align-middle">share</span>
+</button>
+</div>
+</div>
+<!-- Job Card 2 -->
+<div class="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 space-y-4">
+<div class="flex justify-between items-start">
+<div class="flex gap-4">
+<div class="w-12 h-12 bg-blue-50 dark:bg-blue-900/30 rounded-lg flex items-center justify-center border border-blue-100 dark:border-blue-800">
+<span class="material-symbols-outlined text-primary">draw</span>
+</div>
+<div>
+<h4 class="font-bold text-lg text-primary leading-tight">Sub-Steel Detailer</h4>
+<p class="text-sm font-medium text-gray-600 dark:text-gray-400">MetalTech Solutions</p>
+</div>
+</div>
+<button class="text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">bookmark</span>
+</button>
+</div>
+<div class="flex flex-wrap gap-y-2 gap-x-4 text-sm text-gray-500 dark:text-gray-400">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-base">location_on</span>
+                        Remote (USA)
+                    </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-base">payments</span>
+                        $75k - $95k
+                    </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-base">schedule</span>
+                        6 hours ago
+                    </div>
+</div>
+<div class="flex gap-2 pt-2">
+<button class="flex-1 bg-primary text-white font-bold py-2.5 rounded-lg text-sm">Quick Apply</button>
+<button class="px-4 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-600 dark:text-gray-300">
+<span class="material-symbols-outlined align-middle">share</span>
+</button>
+</div>
+</div>
+<!-- Job Card 3 -->
+<div class="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 space-y-4">
+<div class="flex justify-between items-start">
+<div class="flex gap-4">
+<div class="w-12 h-12 bg-blue-50 dark:bg-blue-900/30 rounded-lg flex items-center justify-center border border-blue-100 dark:border-blue-800">
+<span class="material-symbols-outlined text-primary">construction</span>
+</div>
+<div>
+<h4 class="font-bold text-lg text-primary leading-tight">Junior Design Engineer</h4>
+<p class="text-sm font-medium text-gray-600 dark:text-gray-400">Global Fab Corp</p>
+</div>
+</div>
+<button class="text-gray-400">
+<span class="material-symbols-outlined">bookmark</span>
+</button>
+</div>
+<div class="flex flex-wrap gap-y-2 gap-x-4 text-sm text-gray-500 dark:text-gray-400">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-base">location_on</span>
+                        Houston, TX
+                    </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-base">payments</span>
+                        $65k - $80k
+                    </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-base">schedule</span>
+                        Yesterday
+                    </div>
+</div>
+<div class="flex gap-2 pt-2">
+<button class="flex-1 bg-primary text-white font-bold py-2.5 rounded-lg text-sm">Quick Apply</button>
+<button class="px-4 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-600 dark:text-gray-300">
+<span class="material-symbols-outlined align-middle">share</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Tab Bar -->
+<div class="fixed bottom-0 left-0 right-0 bg-white/90 dark:bg-background-dark/90 backdrop-blur-lg border-t border-gray-200 dark:border-gray-800 pb-6 pt-2 px-6 flex justify-between items-center z-50">
+<button class="flex flex-col items-center gap-1 text-gray-400">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">work</span>
+<span class="text-[10px] font-bold">Jobs</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-gray-400">
+<span class="material-symbols-outlined">bookmark</span>
+<span class="text-[10px] font-medium">Saved</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-gray-400">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</button>
+</div>
+<script src="assets/nav-loader.js"></script>
+</body></html>

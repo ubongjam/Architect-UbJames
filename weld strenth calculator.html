@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#258cf4",
+                        "accent-orange": "#f97316",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101922",
+                        "card-dark": "#182634",
+                        "border-dark": "#314d68"
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<title>Weld Strength Calculator</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+    </style>
+    <link rel="stylesheet" href="assets/site.css"/>
+    </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white min-h-screen">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 bg-background-light dark:bg-background-dark border-b border-slate-200 dark:border-border-dark flex items-center p-4">
+<button class="text-primary flex items-center justify-center size-10 rounded-full hover:bg-primary/10">
+<span class="material-symbols-outlined">arrow_back_ios_new</span>
+</button>
+<h2 class="text-lg font-bold leading-tight tracking-tight flex-1 text-center pr-10">Weld Strength Calculator</h2>
+</header>
+<main class="max-w-md mx-auto pb-32">
+<!-- Technical Diagram Section -->
+<section class="p-4">
+<div class="w-full bg-card-dark rounded-xl overflow-hidden border border-border-dark aspect-[3/2] flex flex-col items-center justify-center relative p-6">
+<!-- Mock Diagram Representation using SVGs/CSS for a technical feel -->
+<div class="relative w-full h-full flex items-center justify-center">
+<div class="w-48 h-48 border-l-4 border-b-4 border-primary relative">
+<!-- Weld Fillet -->
+<div class="absolute bottom-0 left-0 w-32 h-32 bg-primary/20 border-t-2 border-r-2 border-dashed border-primary/40 rounded-tr-sm">
+<div class="absolute top-0 right-0 w-full h-full bg-gradient-to-bl from-primary/40 to-transparent"></div>
+</div>
+<!-- Labels -->
+<div class="absolute -left-8 bottom-16 text-xs text-accent-orange font-bold">Leg (s)</div>
+<div class="absolute left-16 -bottom-8 text-xs text-accent-orange font-bold">Length (L)</div>
+<div class="absolute left-10 bottom-10 rotate-45 text-[10px] text-white bg-background-dark/80 px-1 rounded">Throat (t)</div>
+</div>
+</div>
+<div class="absolute bottom-3 right-4 text-[10px] text-slate-400 uppercase tracking-widest font-mono">Fillet Weld Geometry v1.0</div>
+</div>
+</section>
+<!-- Configuration Header -->
+<div class="px-4">
+<h3 class="text-white text-lg font-bold leading-tight tracking-tight pt-4 pb-2 border-b border-border-dark">Weld Configuration</h3>
+</div>
+<!-- Selection Menus -->
+<div class="flex flex-col gap-1 px-4 py-2">
+<div class="flex flex-wrap items-end gap-4 py-3" style="--select-button-svg: url('data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2724px%27 height=%2724px%27 fill=%27rgb(144,173,203)%27 viewBox=%270 0 256 256%27%3e%3cpath d=%27M181.66,170.34a8,8,0,0,1,0,11.32l-48,48a8,8,0,0,1-11.32,0l-48-48a8,8,0,0,1,11.32-11.32L128,212.69l42.34-42.35A8,8,0,0,1,181.66,170.34Zm-96-84.68L128,43.31l42.34,42.35a8,8,0,0,0,11.32-11.32l-48-48a8,8,0,0,0-11.32,0l-48,48A8,8,0,0,0,85.66,85.66Z%27%3e%3c/path%3e%3c/svg%3e');">
+<label class="flex flex-col min-w-40 flex-1">
+<p class="text-white text-sm font-medium leading-normal pb-2">Weld Type</p>
+<select class="form-select flex w-full rounded-lg text-white focus:outline-0 focus:ring-2 focus:ring-primary border border-border-dark bg-card-dark h-14 bg-[image:--select-button-svg] appearance-none p-[15px] text-base font-normal">
+<option value="fillet">Fillet Weld</option>
+<option value="groove">Groove Weld</option>
+<option value="plug">Plug/Slot Weld</option>
+</select>
+</label>
+</div>
+<div class="flex flex-wrap items-end gap-4 py-3" style="--select-button-svg: url('data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2724px%27 height=%2724px%27 fill=%27rgb(144,173,203)%27 viewBox=%270 0 256 256%27%3e%3cpath d=%27M181.66,170.34a8,8,0,0,1,0,11.32l-48,48a8,8,0,0,1-11.32,0l-48-48a8,8,0,0,1,11.32-11.32L128,212.69l42.34-42.35A8,8,0,0,1,181.66,170.34Zm-96-84.68L128,43.31l42.34,42.35a8,8,0,0,0,11.32-11.32l-48-48a8,8,0,0,0-11.32,0l-48,48A8,8,0,0,0,85.66,85.66Z%27%3e%3c/path%3e%3c/svg%3e');">
+<label class="flex flex-col min-w-40 flex-1">
+<p class="text-white text-sm font-medium leading-normal pb-2">Electrode Strength</p>
+<select class="form-select flex w-full rounded-lg text-white focus:outline-0 focus:ring-2 focus:ring-primary border border-border-dark bg-card-dark h-14 bg-[image:--select-button-svg] appearance-none p-[15px] text-base font-normal">
+<option value="e70">E70xx (482 MPa)</option>
+<option value="e60">E60xx (414 MPa)</option>
+<option value="e80">E80xx (551 MPa)</option>
+<option value="e90">E90xx (620 MPa)</option>
+</select>
+</label>
+</div>
+<div class="flex flex-wrap items-end gap-4 py-3" style="--select-button-svg: url('data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2724px%27 height=%2724px%27 fill=%27rgb(144,173,203)%27 viewBox=%270 0 256 256%27%3e%3cpath d=%27M181.66,170.34a8,8,0,0,1,0,11.32l-48,48a8,8,0,0,1-11.32,0l-48-48a8,8,0,0,1,11.32-11.32L128,212.69l42.34-42.35A8,8,0,0,1,181.66,170.34Zm-96-84.68L128,43.31l42.34,42.35a8,8,0,0,0,11.32-11.32l-48-48a8,8,0,0,0-11.32,0l-48,48A8,8,0,0,0,85.66,85.66Z%27%3e%3c/path%3e%3c/svg%3e');">
+<label class="flex flex-col min-w-40 flex-1">
+<p class="text-white text-sm font-medium leading-normal pb-2">Base Metal Strength (Fy)</p>
+<select class="form-select flex w-full rounded-lg text-white focus:outline-0 focus:ring-2 focus:ring-primary border border-border-dark bg-card-dark h-14 bg-[image:--select-button-svg] appearance-none p-[15px] text-base font-normal">
+<option value="a36">A36 (250 MPa)</option>
+<option value="a572">A572 Gr 50 (345 MPa)</option>
+<option value="a992">A992 (345 MPa)</option>
+</select>
+</label>
+</div>
+</div>
+<!-- Input Fields Section -->
+<div class="px-4">
+<h3 class="text-white text-lg font-bold leading-tight tracking-tight pt-6 pb-2 border-b border-border-dark">Dimensions &amp; Loads</h3>
+</div>
+<div class="px-4 py-4 space-y-4">
+<div class="flex flex-col">
+<label class="text-white text-sm font-medium mb-2">Weld Leg Size (s)</label>
+<div class="flex gap-2">
+<input class="flex-1 bg-card-dark border border-border-dark text-white rounded-lg h-14 px-4 focus:ring-2 focus:ring-primary focus:border-primary outline-none text-lg" placeholder="6.0" type="number"/>
+<div class="bg-border-dark flex items-center px-4 rounded-lg text-white/70 font-medium">mm</div>
+</div>
+</div>
+<div class="flex flex-col">
+<label class="text-white text-sm font-medium mb-2">Total Length (L)</label>
+<div class="flex gap-2">
+<input class="flex-1 bg-card-dark border border-border-dark text-white rounded-lg h-14 px-4 focus:ring-2 focus:ring-primary focus:border-primary outline-none text-lg" placeholder="150" type="number"/>
+<div class="bg-border-dark flex items-center px-4 rounded-lg text-white/70 font-medium">mm</div>
+</div>
+</div>
+<div class="flex flex-col">
+<label class="text-white text-sm font-medium mb-2">Applied Load (P)</label>
+<div class="flex gap-2">
+<input class="flex-1 bg-card-dark border border-border-dark text-white rounded-lg h-14 px-4 focus:ring-2 focus:ring-accent-orange focus:border-accent-orange outline-none text-lg" placeholder="25.5" type="number"/>
+<div class="bg-accent-orange/20 flex items-center px-4 rounded-lg text-accent-orange font-bold uppercase text-xs">kN</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Fixed Action Button -->
+<footer class="fixed bottom-0 left-0 right-0 bg-background-light dark:bg-background-dark/95 backdrop-blur-md border-t border-slate-200 dark:border-border-dark p-4 flex flex-col items-center">
+<button class="w-full max-w-md bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/20 flex items-center justify-center gap-2 active:scale-95 transition-transform">
+<span class="material-symbols-outlined">calculate</span>
+            Calculate Strength
+        </button>
+<div class="h-6 mt-1">
+<!-- Safe area for mobile home indicators -->
+</div>
+</footer>
+<script src="assets/nav-loader.js"></script>
+</body></html>

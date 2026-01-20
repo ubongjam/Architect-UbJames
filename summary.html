@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1152d4",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+    </style>
+<title>Eurocode 3 Quick Reference</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+    </style>
+    <link rel="stylesheet" href="assets/site.css"/>
+    </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<!-- Top App Bar -->
+<div class="sticky top-0 z-50 bg-background-light dark:bg-background-dark/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center p-4 pb-2 justify-between">
+<div class="flex size-10 shrink-0 items-center justify-start">
+<span class="material-symbols-outlined cursor-pointer">arrow_back_ios</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-tight flex-1 text-center font-display">Eurocode 3 Summary</h2>
+<div class="flex w-10 items-center justify-end">
+<button class="flex cursor-pointer items-center justify-center rounded-lg h-10 bg-transparent gap-2 text-base font-bold min-w-0 p-0">
+<span class="material-symbols-outlined">search</span>
+</button>
+</div>
+</div>
+<!-- Code Version Toggle -->
+<div class="px-4 py-2">
+<label class="flex flex-col w-full">
+<div class="flex items-center justify-between pb-1">
+<p class="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Standard Version</p>
+<span class="text-[10px] bg-primary/20 text-primary px-2 py-0.5 rounded-full font-bold">LATEST</span>
+</div>
+<div class="relative">
+<select class="form-input flex w-full appearance-none rounded-xl text-slate-900 dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 h-12 px-4 text-sm font-medium leading-normal">
+<option value="en1993-1-1">EN 1993-1-1: General Rules</option>
+<option selected="" value="en1993-1-8">EN 1993-1-8: Design of Connections</option>
+<option value="en1993-1-5">EN 1993-1-5: Plated Structural Elements</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-slate-500">
+<span class="material-symbols-outlined text-lg">unfold_more</span>
+</div>
+</div>
+</label>
+</div>
+<!-- Tabs -->
+<div class="mt-2">
+<div class="flex border-b border-slate-200 dark:border-slate-800 px-4 justify-between">
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-slate-500 dark:text-slate-400 pb-[10px] pt-3 flex-1" href="#">
+<p class="text-xs font-bold leading-normal tracking-wide">General Rules</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-primary text-primary pb-[10px] pt-3 flex-1" href="#">
+<p class="text-xs font-bold leading-normal tracking-wide">Connections</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-slate-500 dark:text-slate-400 pb-[10px] pt-3 flex-1" href="#">
+<p class="text-xs font-bold leading-normal tracking-wide">Stability</p>
+</a>
+</div>
+</div>
+</div>
+<!-- Main Content -->
+<main class="pb-32 overflow-y-auto">
+<!-- Section: Partial Safety Factors -->
+<div class="mt-4">
+<h3 class="text-slate-900 dark:text-white text-base font-bold leading-tight tracking-tight px-4 pb-2 pt-4 font-display">Partial Safety Factors (γ<sub>M</sub>)</h3>
+<div class="px-4">
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 divide-y divide-slate-100 dark:divide-slate-800">
+<div class="flex justify-between items-center px-4 py-3">
+<div class="flex flex-col">
+<p class="text-slate-900 dark:text-slate-100 text-sm font-semibold">γ<sub>M0</sub></p>
+<p class="text-slate-500 dark:text-slate-400 text-[11px]">Resistance of cross-sections</p>
+</div>
+<p class="text-primary text-sm font-bold bg-primary/10 px-3 py-1 rounded-lg">1.00</p>
+</div>
+<div class="flex justify-between items-center px-4 py-3">
+<div class="flex flex-col">
+<p class="text-slate-900 dark:text-slate-100 text-sm font-semibold">γ<sub>M1</sub></p>
+<p class="text-slate-500 dark:text-slate-400 text-[11px]">Resistance of members to buckling</p>
+</div>
+<p class="text-primary text-sm font-bold bg-primary/10 px-3 py-1 rounded-lg">1.00</p>
+</div>
+<div class="flex justify-between items-center px-4 py-3">
+<div class="flex flex-col">
+<p class="text-slate-900 dark:text-slate-100 text-sm font-semibold">γ<sub>M2</sub></p>
+<p class="text-slate-500 dark:text-slate-400 text-[11px]">Resistance of joints (tension/shear)</p>
+</div>
+<p class="text-primary text-sm font-bold bg-primary/10 px-3 py-1 rounded-lg">1.25</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Section: Bolted Connections -->
+<div class="mt-6">
+<h3 class="text-slate-900 dark:text-white text-base font-bold leading-tight tracking-tight px-4 pb-2 pt-2 font-display">Bolted Connections (Category A)</h3>
+<div class="px-4 space-y-3">
+<!-- Formula Card 1 -->
+<div class="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800">
+<div class="flex justify-between items-start mb-3">
+<span class="text-[10px] font-bold text-primary uppercase tracking-widest">Shear Resistance</span>
+<span class="text-[10px] text-slate-400">Table 3.4</span>
+</div>
+<div class="bg-slate-50 dark:bg-slate-950 p-4 rounded-lg flex items-center justify-center border border-slate-100 dark:border-slate-800">
+<p class="italic text-lg font-medium text-slate-800 dark:text-slate-200">
+                            F<sub>v,Rd</sub> = α<sub>v</sub> f<sub>ub</sub> A / γ<sub>M2</sub>
+</p>
+</div>
+<div class="mt-3 grid grid-cols-2 gap-2 text-[11px] text-slate-500 dark:text-slate-400">
+<p>α<sub>v</sub> = 0.6 (Grades 4.6, 5.6, 8.8)</p>
+<p>α<sub>v</sub> = 0.5 (Grades 4.8, 5.8, 10.9)</p>
+</div>
+</div>
+<!-- Formula Card 2 -->
+<div class="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800">
+<div class="flex justify-between items-start mb-3">
+<span class="text-[10px] font-bold text-primary uppercase tracking-widest">Bearing Resistance</span>
+<span class="text-[10px] text-slate-400">Clause 3.6.1</span>
+</div>
+<div class="bg-slate-50 dark:bg-slate-950 p-4 rounded-lg flex items-center justify-center border border-slate-100 dark:border-slate-800">
+<p class="italic text-lg font-medium text-slate-800 dark:text-slate-200">
+                            F<sub>b,Rd</sub> = k<sub>1</sub> α<sub>b</sub> f<sub>u</sub> d t / γ<sub>M2</sub>
+</p>
+</div>
+<p class="mt-3 text-[11px] text-slate-500 dark:text-slate-400 italic">
+                        Where α<sub>b</sub> = min(α<sub>d</sub>; f<sub>ub</sub>/f<sub>u</sub>; 1.0)
+                    </p>
+</div>
+</div>
+</div>
+<!-- Section: Weld Design -->
+<div class="mt-6">
+<h3 class="text-slate-900 dark:text-white text-base font-bold leading-tight tracking-tight px-4 pb-2 pt-2 font-display">Fillet Weld Design</h3>
+<div class="px-4">
+<div class="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800">
+<div class="flex justify-between items-start mb-3">
+<span class="text-[10px] font-bold text-primary uppercase tracking-widest">Simplified Method</span>
+<span class="text-[10px] text-slate-400">Clause 4.5.3.3</span>
+</div>
+<div class="bg-slate-50 dark:bg-slate-950 p-4 rounded-lg flex items-center justify-center border border-slate-100 dark:border-slate-800 mb-4">
+<p class="italic text-lg font-medium text-slate-800 dark:text-slate-200">
+                            f<sub>vw,d</sub> = f<sub>u</sub> / (√3 β<sub>w</sub> γ<sub>M2</sub>)
+                        </p>
+</div>
+<!-- Small Table for Correlation Factors -->
+<div class="overflow-hidden rounded-lg border border-slate-100 dark:border-slate-800">
+<div class="grid grid-cols-2 bg-slate-100 dark:bg-slate-800 py-1.5 px-3">
+<span class="text-[10px] font-bold uppercase text-slate-500">Steel Grade</span>
+<span class="text-[10px] font-bold uppercase text-slate-500 text-right">β<sub>w</sub> factor</span>
+</div>
+<div class="grid grid-cols-2 py-2 px-3 border-b border-slate-100 dark:border-slate-800">
+<span class="text-xs font-medium">S 235</span>
+<span class="text-xs font-bold text-right">0.80</span>
+</div>
+<div class="grid grid-cols-2 py-2 px-3 border-b border-slate-100 dark:border-slate-800">
+<span class="text-xs font-medium">S 275</span>
+<span class="text-xs font-bold text-right">0.85</span>
+</div>
+<div class="grid grid-cols-2 py-2 px-3">
+<span class="text-xs font-medium">S 355</span>
+<span class="text-xs font-bold text-right">0.90</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Floating Bottom Navigation / PDF Link -->
+<div class="fixed bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background-light dark:from-background-dark via-background-light/95 dark:via-background-dark/95 to-transparent">
+<button class="flex w-full items-center justify-center gap-3 bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl shadow-lg transition-all active:scale-[0.98]">
+<span class="material-symbols-outlined text-xl">picture_as_pdf</span>
+<span class="font-display tracking-tight">View Full Official PDF</span>
+</button>
+<p class="text-center text-[10px] text-slate-500 dark:text-slate-500 mt-2 uppercase tracking-tighter">
+            Authorized Digital Summary • Eurocode EN 1993-1-8:2005
+        </p>
+</div>
+<script src="assets/nav-loader.js"></script>
+</body></html>

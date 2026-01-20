@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Application Success</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1152d4",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                        "card-dark": "#192233",
+                        "border-dark": "#324467",
+                        "text-muted": "#92a4c9",
+                        "success": "#10b981"
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+    </style>
+    <link rel="stylesheet" href="assets/site.css"/>
+    </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white min-h-screen">
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-border-dark">
+<div class="flex items-center p-4 justify-between max-w-md mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">engineering</span>
+<h1 class="text-lg font-bold leading-tight tracking-tight">Job Board</h1>
+</div>
+<div class="flex gap-2">
+<button class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-card-dark transition-colors">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+</div>
+</header>
+<main class="max-w-md mx-auto px-6 pt-12 pb-24">
+<div class="flex flex-col items-center text-center mb-10">
+<div class="w-20 h-20 bg-success/10 dark:bg-success/20 rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-success text-5xl">check_circle</span>
+</div>
+<h2 class="text-2xl font-bold mb-2">Application Submitted!</h2>
+<p class="text-slate-600 dark:text-text-muted">Your profile has been successfully sent to the engineering firm.</p>
+</div>
+<div class="bg-white dark:bg-card-dark rounded-xl border border-slate-200 dark:border-border-dark overflow-hidden mb-8 shadow-sm">
+<div class="p-4 bg-slate-50 dark:bg-background-dark/30 border-b border-slate-200 dark:border-border-dark">
+<p class="text-xs font-bold uppercase tracking-wider text-primary">Application Summary</p>
+</div>
+<div class="p-5 space-y-4">
+<div class="flex flex-col">
+<span class="text-xs text-text-muted font-bold uppercase mb-1">Job Title</span>
+<span class="text-base font-semibold">Junior Structural Designer</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xs text-text-muted font-bold uppercase mb-1">Company</span>
+<span class="text-base font-semibold">SteelSpec Solutions Ltd.</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xs text-text-muted font-bold uppercase mb-1">Date Submitted</span>
+<span class="text-base font-mono">Oct 24, 2023 · 14:30 GMT</span>
+</div>
+</div>
+</div>
+<div class="mb-10 px-2">
+<h3 class="flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-primary mb-3">
+<span class="material-symbols-outlined text-sm">info</span>
+                Next Steps
+            </h3>
+<p class="text-sm text-slate-600 dark:text-text-muted leading-relaxed">
+                The hiring manager will review your technical portfolio and credentials. If your profile matches their requirements, they will contact you directly via <span class="text-slate-900 dark:text-white font-medium">email</span> to schedule a technical interview.
+            </p>
+</div>
+<div class="flex flex-col gap-3">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-lg shadow-lg shadow-primary/20 transition-all active:scale-[0.98] flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">assignment_turned_in</span>
+                View My Applications
+            </button>
+<button class="w-full bg-white dark:bg-card-dark border border-slate-200 dark:border-border-dark hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200 font-bold py-4 rounded-lg transition-all active:scale-[0.98] flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">work</span>
+                Return to Job Board
+            </button>
+</div>
+<div class="mt-12 text-center opacity-50">
+<span class="material-symbols-outlined text-2xl mb-1">verified</span>
+<p class="text-[10px] uppercase font-bold tracking-tighter">Verified Engineering Application System</p>
+</div>
+</main>
+<nav class="fixed bottom-0 left-0 right-0 bg-white/90 dark:bg-background-dark/90 backdrop-blur-lg border-t border-slate-200 dark:border-border-dark pb-6 pt-2 z-50">
+<div class="max-w-md mx-auto flex justify-around items-center">
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-bold uppercase">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">handyman</span>
+<span class="text-[10px] font-bold uppercase">Tools</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined fill-1">work</span>
+<span class="text-[10px] font-bold uppercase">Jobs</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold uppercase">Profile</span>
+</button>
+</div>
+</nav>
+
+<script src="assets/nav-loader.js"></script>
+</body></html>

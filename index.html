@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Engineering Hub Home</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1152d4",
+                        "accent": "#ff6b00", // Safety Orange
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#0f172a",
+                        "card-dark": "#1e293b",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+    </style>
+    <link rel="stylesheet" href="assets/site.css"/>
+    </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<!-- Top AppBar -->
+<div class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="flex items-center p-4 pb-2 justify-between">
+<div class="flex size-10 shrink-0 items-center">
+<div class="bg-primary rounded-lg size-10 flex items-center justify-center">
+<span class="material-symbols-outlined text-white">architecture</span>
+</div>
+</div>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-tight flex-1 ml-3">Engineering Hub</h2>
+<div class="flex gap-2">
+<button class="flex size-10 cursor-pointer items-center justify-center rounded-lg bg-slate-200 dark:bg-card-dark text-slate-600 dark:text-white">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="size-10 rounded-lg bg-center bg-cover border-2 border-primary/20" data-alt="User profile avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDxQtWsmM7CcW_n5FsEWSY0uq7Dk6lgEbh8l2D1JZ-R2V-8Z9O99LCAMSycYJp9ajN-f3NHohKyGloBDv4IgA9fIYru4nXTdn-CcVekgrT3pI40_wSA1h-RV5g0nM0FehL6BpfDxLPXGYG61jVj5LTdmRgn5TwjKdzymOGlNovOrrEOLWorL-VrEFaIAZMGcZJ7tuNehLEcBX2kgCU7-rms0Jd4iqHhDoS9ZXzjqMZJeW1XyvmbqmrLfy6DQSfJTcZ5hQ1a_ZrPl08");'></div>
+</div>
+</div>
+<!-- SearchBar -->
+<div class="px-4 py-3">
+<label class="flex flex-col min-w-40 h-12 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-xl h-full shadow-sm">
+<div class="text-slate-400 flex border-none bg-white dark:bg-card-dark items-center justify-center pl-4 rounded-l-xl border-r-0">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-xl text-slate-900 dark:text-white focus:outline-0 focus:ring-0 border-none bg-white dark:bg-card-dark placeholder:text-slate-400 px-4 pl-2 text-base font-normal leading-normal" placeholder="Search formulas, elements, or joints..." value=""/>
+</div>
+</label>
+</div>
+</div>
+<!-- Main Content -->
+<main class="pb-24">
+<!-- Daily Insight Section -->
+<div class="px-4 pt-4 flex items-center justify-between">
+<h3 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-tight">Daily Insight</h3>
+<span class="bg-accent/10 text-accent text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">New</span>
+</div>
+<div class="p-4">
+<div class="flex flex-col items-stretch justify-start rounded-xl shadow-lg bg-white dark:bg-card-dark overflow-hidden border border-slate-200 dark:border-slate-800">
+<div class="w-full bg-center bg-no-repeat aspect-[21/9] bg-cover" data-alt="Close up of structural steel beam connection" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA_pUsUsem3eTSxfI83aZtN4dVTBsnMVBOdEFLjBHpTO8EGFop9oSxfEhdnVrDPlMf0hIk_ik7BfdVfKORDQ69HknJbp1CD7yjxsU1vSLCdLfniS4OJQ7QQQSuhvJ79jdbcVNivuOxkgDDoKuWoEWFpD-JzBj9N57vKKLv5W8OxSd2LFp0dYTE3gXZLeuIAYun8RyjDNvkmWuuhGzYEAwSWroDnbHIBJd7qqykQSP4hrllIhA5WFVHfE25dVuzgrvK_dmhoMhy23Vw");'></div>
+<div class="flex w-full grow flex-col items-stretch justify-center gap-2 p-5">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm">science</span>
+<p class="text-primary text-xs font-bold uppercase tracking-widest">Steel Property of the Day</p>
+</div>
+<p class="text-slate-900 dark:text-white text-xl font-bold leading-tight">Yield vs. Tensile Strength</p>
+<p class="text-slate-600 dark:text-slate-400 text-sm font-normal leading-relaxed">Understanding the elastic limit and ultimate strength of A36 vs A992 steel grades in seismic design.</p>
+<div class="flex items-center justify-end mt-2">
+<button class="flex items-center justify-center rounded-lg h-9 px-5 bg-primary text-white text-sm font-bold shadow-md hover:bg-blue-700 transition-colors">
+<span>Read More</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Categories Grid -->
+<div class="px-4 pt-4">
+<h3 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-tight">Categories</h3>
+</div>
+<div class="grid grid-cols-2 gap-4 p-4">
+<!-- Category 1 -->
+<div class="bg-white dark:bg-card-dark p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col items-start gap-4">
+<div class="size-12 rounded-lg bg-blue-100 dark:bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">architecture</span>
+</div>
+<div>
+<p class="text-slate-900 dark:text-white font-bold text-sm leading-tight">Design Fundamentals</p>
+<p class="text-slate-500 dark:text-slate-400 text-[10px] mt-1">12 Modules</p>
+</div>
+</div>
+<!-- Category 2 -->
+<div class="bg-white dark:bg-card-dark p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col items-start gap-4">
+<div class="size-12 rounded-lg bg-orange-100 dark:bg-accent/20 flex items-center justify-center text-accent">
+<span class="material-symbols-outlined text-3xl">precision_manufacturing</span>
+</div>
+<div>
+<p class="text-slate-900 dark:text-white font-bold text-sm leading-tight">Element Design</p>
+<p class="text-slate-500 dark:text-slate-400 text-[10px] mt-1">8 Modules</p>
+</div>
+</div>
+<!-- Category 3 -->
+<div class="bg-white dark:bg-card-dark p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col items-start gap-4">
+<div class="size-12 rounded-lg bg-slate-100 dark:bg-slate-700 flex items-center justify-center text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined text-3xl">hub</span>
+</div>
+<div>
+<p class="text-slate-900 dark:text-white font-bold text-sm leading-tight">Connections</p>
+<p class="text-slate-500 dark:text-slate-400 text-[10px] mt-1">15 Modules</p>
+</div>
+</div>
+<!-- Category 4 -->
+<div class="bg-white dark:bg-card-dark p-5 rounded-xl border border-primary/30 dark:border-primary/50 shadow-sm flex flex-col items-start gap-4 relative overflow-hidden">
+<div class="absolute top-0 right-0">
+<div class="bg-primary text-white text-[8px] px-2 py-0.5 rounded-bl-lg font-bold uppercase">Pro</div>
+</div>
+<div class="size-12 rounded-lg bg-primary flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-3xl">calculate</span>
+</div>
+<div>
+<p class="text-slate-900 dark:text-white font-bold text-sm leading-tight">Calculators</p>
+<p class="text-slate-500 dark:text-slate-400 text-[10px] mt-1">Tools &amp; Utils</p>
+</div>
+</div>
+</div>
+<!-- Recent Tutorials Horizontal Scroll -->
+<div class="px-4 pt-4 flex items-center justify-between">
+<h3 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-tight">Recent Tutorials</h3>
+<button class="text-primary text-xs font-bold">View All</button>
+</div>
+<div class="flex overflow-x-auto no-scrollbar gap-4 px-4 py-4">
+<!-- Tutorial Card 1 -->
+<div class="min-w-[260px] bg-white dark:bg-card-dark rounded-xl overflow-hidden shadow-md border border-slate-200 dark:border-slate-800">
+<div class="h-32 bg-center bg-cover relative" data-alt="Technical diagram of beam analysis" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC9W9IjweMv-qVsWL02TllAO-akLc4bxLVoCS_XgpZU5p3dgPr7fgptE5-qTlMdfWRgXV3yZhTc0zDEnjlHmZs7dt73L0boVkTzvf8w-DNzvzGzECx53WnY3PZGeQQaUPuEnBKcGPQ7DGynV6otXnKrFdw1uG3XfPYLROXBoFipN0YRCavmJS5LTNOT703Od8EqFZNmpVmJLw_dfFAI0ZhMVP8j0IVnVRhzLM8oYelT2-BWx0PIdJFgPFsHHD_cGGq6MltEBUx4OHc");'>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-3">
+<span class="text-white text-[10px] font-medium bg-black/40 backdrop-blur-sm px-2 py-1 rounded">12 min read</span>
+</div>
+</div>
+<div class="p-4">
+<p class="text-slate-900 dark:text-white font-bold text-sm">Beam Analysis</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs mt-1">Statics and bending moments</p>
+<div class="mt-4 flex items-center gap-3">
+<div class="flex-1 h-1.5 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="w-[65%] h-full bg-primary"></div>
+</div>
+<span class="text-[10px] font-bold text-slate-400">65%</span>
+</div>
+</div>
+</div>
+<!-- Tutorial Card 2 -->
+<div class="min-w-[260px] bg-white dark:bg-card-dark rounded-xl overflow-hidden shadow-md border border-slate-200 dark:border-slate-800">
+<div class="h-32 bg-center bg-cover relative" data-alt="Schematic of welded joint types" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuACsjE3ZfR6JuOyROWiqmDIweMICHX04S8Vm7ZYELwhuYQPnMLWpHKgApNOkmXfcduhieLWWiIA9hN6Y7x0N_y4kAAQhaThSlVXbvq_tG3zzHm1ytv9fqQFp1FM-xwB7lNLoGj92fuvffHzy8Ggp-Wlj_xFTuA-Z1CZhTelR6w_PA0U1F1jiutpGIMYm0gjqJH_lI0kypd9RITeNUvJkXEDNKh4bA0a8Pu-RwFYPzIqu6vCuMmFXrXSO5hcH_VEVLWbna5m7y38CpY");'>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-3">
+<span class="text-white text-[10px] font-medium bg-black/40 backdrop-blur-sm px-2 py-1 rounded">18 min read</span>
+</div>
+</div>
+<div class="p-4">
+<p class="text-slate-900 dark:text-white font-bold text-sm">Welded Joints</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs mt-1">Fillet and butt weld design</p>
+<div class="mt-4 flex items-center gap-3">
+<div class="flex-1 h-1.5 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="w-[20%] h-full bg-accent"></div>
+</div>
+<span class="text-[10px] font-bold text-slate-400">20%</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation (iOS Style) -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white/90 dark:bg-background-dark/90 backdrop-blur-lg border-t border-slate-200 dark:border-slate-800 px-6 py-3 flex justify-between items-center z-50">
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined fill-[1]">home</span>
+<span class="text-[10px] font-bold">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500">
+<span class="material-symbols-outlined">library_books</span>
+<span class="text-[10px] font-bold">Library</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500">
+<span class="material-symbols-outlined">build</span>
+<span class="text-[10px] font-bold">Tools</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-[10px] font-bold">Settings</span>
+</button>
+</nav>
+<script src="assets/nav-loader.js"></script>
+</body></html>

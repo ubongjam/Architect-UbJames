@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Job Vacancy Details</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+    </style>
+    <link rel="stylesheet" href="assets/site.css"/>
+    </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Top Navigation Bar -->
+<nav class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center p-4 justify-between max-w-md mx-auto">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 cursor-pointer transition-colors">
+<span class="material-symbols-outlined text-2xl">arrow_back_ios_new</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-tight flex-1 text-center">Job Details</h2>
+<div class="flex size-10 items-center justify-center rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 cursor-pointer transition-colors">
+<span class="material-symbols-outlined text-2xl">more_vert</span>
+</div>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 overflow-y-auto pb-32 max-w-md mx-auto w-full">
+<!-- Profile Header Section -->
+<div class="p-4 mt-2">
+<div class="flex flex-col gap-4">
+<div class="flex gap-4 items-start">
+<div class="bg-primary/10 rounded-xl w-24 h-24 flex items-center justify-center border border-primary/20 overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Modern structural engineering firm logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCB8CnCrNBne3s4pqbyROMquea8MXCcc8K3dgFtuS-Ue4bORVrvGvu8pW7Vfj3uS05HeyFi7qKpSWRAPsxEST6rxIc7BqE5yUOSfEQW4hAaI5viCsKXR2WoOInbeSpDnWhGxyTku2KcMaXXpcn4Rwd0FEnXqVGBWFuj1rDSjJF6YHviyjomNIfyou-rtm1upVUirpkRLbD6sSAANq0jaHuw4g22lc4mjOborqxkhyLK01uMP5artSkglv-0FBwX1yr_xoPqDc-_dV8"/>
+</div>
+<div class="flex flex-col justify-center">
+<h1 class="text-2xl font-bold leading-tight tracking-tight text-slate-900 dark:text-white">Structural Steel Detailer</h1>
+<p class="text-primary font-semibold text-base mt-1">SteelFrame Solutions</p>
+<div class="flex items-center gap-1 text-slate-500 dark:text-slate-400 text-sm mt-1">
+<span class="material-symbols-outlined text-sm">location_on</span>
+<span>New York, NY • Full-time</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Stats Chips -->
+<div class="flex gap-3 px-4 py-2 overflow-x-auto hide-scrollbar">
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-slate-100 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 px-4">
+<span class="material-symbols-outlined text-primary text-[20px]">payments</span>
+<p class="text-sm font-medium">$85k - $120k</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-slate-100 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 px-4">
+<span class="material-symbols-outlined text-primary text-[20px]">work_history</span>
+<p class="text-sm font-medium">3-5 Years</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-slate-100 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 px-4">
+<span class="material-symbols-outlined text-primary text-[20px]">home_work</span>
+<p class="text-sm font-medium">Hybrid</p>
+</div>
+</div>
+<!-- Job Overview Section -->
+<section class="mt-4 px-4">
+<h3 class="text-lg font-bold leading-tight tracking-tight border-l-4 border-primary pl-3 mb-3">Job Overview</h3>
+<p class="text-slate-600 dark:text-slate-300 text-base leading-relaxed">
+                We are looking for a precision-driven Structural Steel Detailer to join our industrial design team. You will focus on complex sub-steel structures, pipe racks, and equipment supports. This role bridges the gap between engineering theory and practical fabrication.
+            </p>
+</section>
+<!-- Key Responsibilities -->
+<section class="mt-8 px-4">
+<h3 class="text-lg font-bold leading-tight tracking-tight border-l-4 border-primary pl-3 mb-3">Key Responsibilities</h3>
+<ul class="space-y-3">
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-primary shrink-0">check_circle</span>
+<span class="text-slate-600 dark:text-slate-300 text-sm">Develop detailed 3D models for industrial sub-steel components.</span>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-primary shrink-0">check_circle</span>
+<span class="text-slate-600 dark:text-slate-300 text-sm">Generate accurate shop and erection drawings following AISC standards.</span>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-primary shrink-0">check_circle</span>
+<span class="text-slate-600 dark:text-slate-300 text-sm">Coordinate with structural engineers to resolve connection design issues.</span>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-primary shrink-0">check_circle</span>
+<span class="text-slate-600 dark:text-slate-300 text-sm">Review architectural and engineering plans for detailing requirements.</span>
+</li>
+</ul>
+</section>
+<!-- Required Skills (Chips) -->
+<section class="mt-8 px-4">
+<h3 class="text-lg font-bold leading-tight tracking-tight border-l-4 border-primary pl-3 mb-3">Required Skills</h3>
+<div class="flex flex-wrap gap-2 mt-3">
+<span class="px-3 py-1.5 rounded-lg bg-primary/10 text-primary text-xs font-bold border border-primary/20 uppercase tracking-wider">Tekla Structures</span>
+<span class="px-3 py-1.5 rounded-lg bg-primary/10 text-primary text-xs font-bold border border-primary/20 uppercase tracking-wider">AutoCAD</span>
+<span class="px-3 py-1.5 rounded-lg bg-primary/10 text-primary text-xs font-bold border border-primary/20 uppercase tracking-wider">Bluebeam</span>
+<span class="px-3 py-1.5 rounded-lg bg-primary/10 text-primary text-xs font-bold border border-primary/20 uppercase tracking-wider">AISC Standards</span>
+<span class="px-3 py-1.5 rounded-lg bg-primary/10 text-primary text-xs font-bold border border-primary/20 uppercase tracking-wider">SDS2</span>
+</div>
+</section>
+<!-- Benefits -->
+<section class="mt-8 px-4">
+<h3 class="text-lg font-bold leading-tight tracking-tight border-l-4 border-primary pl-3 mb-3">Benefits</h3>
+<div class="grid grid-cols-2 gap-3">
+<div class="p-3 rounded-xl bg-slate-100 dark:bg-slate-800/50 flex flex-col items-center text-center gap-2">
+<span class="material-symbols-outlined text-primary">medical_services</span>
+<span class="text-xs font-medium">Premium Healthcare</span>
+</div>
+<div class="p-3 rounded-xl bg-slate-100 dark:bg-slate-800/50 flex flex-col items-center text-center gap-2">
+<span class="material-symbols-outlined text-primary">school</span>
+<span class="text-xs font-medium">PDH Reimbursement</span>
+</div>
+<div class="p-3 rounded-xl bg-slate-100 dark:bg-slate-800/50 flex flex-col items-center text-center gap-2">
+<span class="material-symbols-outlined text-primary">schedule</span>
+<span class="text-xs font-medium">Flexible Hours</span>
+</div>
+<div class="p-3 rounded-xl bg-slate-100 dark:bg-slate-800/50 flex flex-col items-center text-center gap-2">
+<span class="material-symbols-outlined text-primary">savings</span>
+<span class="text-xs font-medium">401(k) Matching</span>
+</div>
+</div>
+</section>
+<!-- Company Profile Section -->
+<section class="mt-8 px-4">
+<div class="bg-primary/5 dark:bg-primary/10 rounded-2xl p-5 border border-primary/10">
+<div class="flex items-center justify-between mb-3">
+<h3 class="text-lg font-bold">Company Profile</h3>
+<span class="text-primary text-sm font-bold cursor-pointer">View Profile</span>
+</div>
+<p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-4">
+                    SteelFrame Solutions is a leading engineering firm specializing in high-complexity industrial steel structures. With over 20 years in the industry, we pride ourselves on precision detailing and innovative modeling techniques that reduce field errors by up to 40%.
+                </p>
+<div class="flex items-center gap-4">
+<div class="flex -space-x-2">
+<img class="w-8 h-8 rounded-full border-2 border-background-dark object-cover" data-alt="Employee profile picture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCM1GUMSpYUmhAI7ucyZjNRPiUe3l-K56d52gXDxTnxeo_WxCmgdROmbGfE7sBZmuZPNYTGc48ZPvhlZGPZw57OWCF0mrG3fbL0Lo3SQVTPrmLdPZ1i4NnF06NVkIDumurIK-TPFatwsOQUKpoxcWmvwUbhTFaO72sMOHh2Mkc1BF_dn8ZchoHwnCFvjg08YJzOGJtWtIRLhoDo87ywllEjaLK9M4VF2xoKL7UFyV1QwMyPPO3YLPkAyOn-MqMvEbriTPQoWp65cBM"/>
+<img class="w-8 h-8 rounded-full border-2 border-background-dark object-cover" data-alt="Employee profile picture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPA2c_D9_P9a9tcDw5bFrGr7plj8cXqFGVmuvHhHOdEAVDU_LBSF4-H6KCFEhSgVffe81p0n47JNcUV8CwKh-xcQpPZfZx3VTvT5_Y3TqW0Sy3dZAz_pOXNSL3lYK_IOxGwmAu6z1xq2-Sl6tGty2aGrooN2glV0lJTdS_ZrebCIpgJVOGJpTkogRbzYxUNd4xmkTvtrS5wdSoXZDQgHXdxJxjeaUna9wf04tJw66VI-VdEFXyUTvI0XPEHSzLVHrCKqQlLHEwXog"/>
+<div class="w-8 h-8 rounded-full border-2 border-background-dark bg-slate-200 dark:bg-slate-700 flex items-center justify-center text-[10px] font-bold">+12</div>
+</div>
+<p class="text-xs text-slate-500 dark:text-slate-400 font-medium">Join 45+ other detailers</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Sticky Bottom Action Bar -->
+<footer class="fixed bottom-0 left-0 right-0 p-4 pb-8 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-lg border-t border-slate-200 dark:border-slate-800 flex justify-center z-50">
+<div class="flex gap-3 w-full max-w-md">
+<button class="flex-1 bg-primary hover:bg-primary/90 text-white h-14 rounded-xl font-bold flex items-center justify-center gap-2 shadow-lg shadow-primary/20 active:scale-95 transition-all">
+<span>Apply Now</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="w-14 h-14 flex items-center justify-center rounded-xl bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors">
+<span class="material-symbols-outlined">share</span>
+</button>
+<button class="w-14 h-14 flex items-center justify-center rounded-xl bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors">
+<span class="material-symbols-outlined">bookmark_add</span>
+</button>
+</div>
+</footer>
+<script src="assets/nav-loader.js"></script>
+</body></html>

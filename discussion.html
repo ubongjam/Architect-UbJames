@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Forum Discussion Detail</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#258cf4",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101922",
+                        "success": "#10b981"
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+    </style>
+    <link rel="stylesheet" href="assets/site.css"/>
+    </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- TopAppBar Component -->
+<header class="sticky top-0 z-30 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center p-4 justify-between max-w-2xl mx-auto w-full">
+<div class="flex items-center gap-3">
+<button class="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">arrow_back_ios</span>
+</button>
+<h2 class="text-lg font-bold leading-tight tracking-tight">Discussion</h2>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined">bookmark</span>
+</button>
+<button class="p-2 text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined">share</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-1 max-w-2xl mx-auto w-full pb-24">
+<!-- Original Post Section -->
+<article class="p-4 border-b border-slate-200 dark:border-slate-800">
+<!-- ProfileHeader Component Modified -->
+<div class="flex items-start gap-4 mb-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-12 w-12 border border-slate-200 dark:border-slate-700" data-alt="Professional headshot of structural engineer Alex Chen" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuATaeWcJXY2fujVtqHpPYHiw9ChEPkK21wFPqg3PEW2WLqVLnpbbun7G_p6k5eck_zovnUj-pcoQu4Zy6MFyuKX05QAbMtlxGvRHrEEacB8l4iEv-G-jd4SnCK6MQ8Y2d9J1Cen0mHm92_sBL7aUJ_ABC8sM9HJwP2diMAQhkpMw8VMGgr0j3zucFdwkZF1XCezhjHDE1d5jchWItwB_ckeWAC2O6HobGmkywKxuoDimhtom4rzsLHh2b2Os6LEjRJYH7qIp00Mxd0");'>
+</div>
+<div class="flex flex-col">
+<h1 class="text-xl font-bold leading-tight tracking-tight mb-1">Structural Analysis of Sub-Steel Portal Frames</h1>
+<div class="flex flex-wrap items-center gap-x-2 gap-y-1">
+<span class="text-primary font-semibold text-sm">Alex Chen, PE</span>
+<span class="text-slate-500 text-sm">• 2 hours ago</span>
+</div>
+<div class="flex gap-2 mt-2">
+<span class="bg-primary/10 text-primary text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded">Portal Frame</span>
+<span class="bg-primary/10 text-primary text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded">Truss Analysis</span>
+</div>
+</div>
+</div>
+<!-- BodyText Component -->
+<div class="space-y-4">
+<p class="text-[15px] leading-relaxed text-slate-700 dark:text-slate-300">
+                    I'm currently working on a sub-steel structure and I'm seeing unexpected lateral displacement at the eaves. Could someone review my structural drawing? The steel grade is <code class="bg-slate-200 dark:bg-slate-800 px-1 rounded font-mono text-sm">S355</code> and the connections are moment-resisting. 
+                </p>
+<p class="text-[15px] leading-relaxed text-slate-700 dark:text-slate-300">
+                    The frame span is 18m with a pitch of 10 degrees. Lateral loads were calculated per Eurocode 3. Is the displacement (currently 42mm) within acceptable serviceability limits or should I stiffen the haunch?
+                </p>
+</div>
+<!-- Images Component -->
+<div class="my-4 overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800 group relative">
+<div class="w-full aspect-[16/9] bg-center bg-no-repeat bg-cover" data-alt="Technical blueprint of a steel portal frame structure" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD6gRui7OwDJY207Pqqjv-1_xZNHEhlnBfoh_2y1DzLtV8bqRaNYNAii-2MJuEmQAaNHuegSutiywU5UKMNqAkpt3peSvk-Tcw73VzJIuVqygSjZw8VTa9SwtuYCaZsYMey0K6m6pUiSM7137wW-dnSsffjdRJZIeE6GCXMAiz9eIrbJZqs-3HPnpY3U40gR50dObgv8fhiS2bOMaBbc_PrGzX7W5ZMi4lyl1U1OYm8M-m_KCNKJ_bcXXchmkm1NxuvMiM-ZUIpATA");'>
+</div>
+<div class="absolute bottom-3 right-3 bg-black/60 backdrop-blur-sm text-white px-3 py-1.5 rounded-full text-xs flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">zoom_in</span>
+                    Tap to view drawing
+                </div>
+</div>
+<!-- ReactionBar Component -->
+<div class="flex items-center gap-4 py-2">
+<div class="flex items-center bg-slate-100 dark:bg-slate-800/50 rounded-lg p-1">
+<button class="flex items-center justify-center gap-2 px-3 py-1.5 text-slate-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">thumb_up</span>
+<span class="text-[13px] font-bold">24</span>
+</button>
+<div class="w-[1px] h-4 bg-slate-300 dark:bg-slate-700 mx-1"></div>
+<button class="flex items-center justify-center gap-2 px-3 py-1.5 text-slate-500 hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined text-[20px]">thumb_down</span>
+</button>
+</div>
+<div class="flex items-center gap-2 px-3 py-1.5 text-slate-500">
+<span class="material-symbols-outlined text-[20px]">chat_bubble</span>
+<span class="text-[13px] font-bold">5</span>
+</div>
+</div>
+</article>
+<!-- Replies Section -->
+<div class="bg-slate-50 dark:bg-background-dark/50 p-4">
+<h3 class="text-sm font-bold text-slate-500 uppercase tracking-widest mb-4">5 Responses</h3>
+<!-- Verified Top Answer -->
+<div class="mb-6 bg-white dark:bg-slate-800/40 rounded-xl border-2 border-success/30 p-4 shadow-sm relative">
+<div class="absolute -top-3 right-4 bg-success text-white px-3 py-0.5 rounded-full text-[11px] font-bold flex items-center gap-1 shadow-md">
+<span class="material-symbols-outlined text-xs">verified</span>
+                    VERIFIED SOLUTION
+                </div>
+<div class="flex items-center gap-3 mb-3">
+<div class="h-8 w-8 rounded-full bg-center bg-cover border border-slate-200 dark:border-slate-700" data-alt="User avatar for Sarah Miller" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCpWifvz7EHjqOhAuwbhN6j617f3VwY7w76zEYekb23YTnpB1R0sqD1R1rlKUyw8sjdB7mgNNV_6p8QotxrRrFS7zSr4oCMKlr8zPTkAqXaYn5R8cBnWToBo2QS988NHnkA-142sAnu-1LBUPHR_IflZt1WTAWl2BvLsqkqpg2Z04uq32b9-IuUxFIp4EBYlhXQ2oe5WyOMLiX7K9vQYr74yEGC8sm1RU5OjXYAGtN2d3dmNILnHIeYTM5TB3rVdx7kkOkneeykNxk');"></div>
+<div>
+<div class="text-sm font-bold">Sarah Miller, SE <span class="text-[10px] bg-slate-100 dark:bg-slate-700 text-slate-500 px-1 rounded ml-1">Expert</span></div>
+<div class="text-[11px] text-slate-500 uppercase font-medium">1 hour ago</div>
+</div>
+</div>
+<p class="text-[14px] leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+                    The 42mm displacement is actually slightly over the L/360 limit for serviceability if you're measuring for wind load combinations. I'd recommend checking the stiffness of the apex connection. In most sub-steel portal frames, the haunch length should be roughly 10% of the span for optimal load distribution. 
+                </p>
+<div class="flex items-center justify-between border-t border-slate-100 dark:border-slate-700 pt-3">
+<div class="flex gap-4">
+<button class="flex items-center gap-1.5 text-success font-bold text-xs">
+<span class="material-symbols-outlined text-sm">thumb_up</span> 18
+                        </button>
+<button class="flex items-center gap-1.5 text-slate-500 font-bold text-xs">
+<span class="material-symbols-outlined text-sm">reply</span> Reply
+                        </button>
+</div>
+</div>
+</div>
+<!-- Standard Reply -->
+<div class="mb-6 bg-white dark:bg-slate-900/40 rounded-xl border border-slate-200 dark:border-slate-800 p-4 shadow-sm">
+<div class="flex items-center gap-3 mb-3">
+<div class="h-8 w-8 rounded-full bg-center bg-cover border border-slate-200 dark:border-slate-700" data-alt="User avatar for David Wu" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCW8Xpwmq6k9du3grxPheYhOLg5s4sq62CggfJWXHyjSj8ZuQDnw3dQ-18Gr37HMOkW0JUdnlc5a7olB1iY-F-9OEx6KdzUBcJvj3sN8f1vVklKMeVw0Bc6mQktSYSYTMiKY79iA3qNGHSQdh9Bt_I9Iz250KFZA90ml_vuDTWKjDalJAEbQbSY4Gb-yq-gYH4trj9VgL2C-7jxQ7x33sBHpJ-HBxiXhgTurckLm4S4mqC8GbIvpWH4Vk1NQ06zuIBifXXYqNQotrQ');"></div>
+<div>
+<div class="text-sm font-bold">David Wu</div>
+<div class="text-[11px] text-slate-500 uppercase font-medium">45 minutes ago</div>
+</div>
+</div>
+<p class="text-[14px] leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+                    Have you accounted for the p-delta effects in your second-order analysis? S355 is ductile enough but stability is usually the controlling factor in these types of frames.
+                </p>
+<div class="flex items-center justify-between border-t border-slate-100 dark:border-slate-700 pt-3">
+<div class="flex gap-4">
+<button class="flex items-center gap-1.5 text-slate-500 font-bold text-xs">
+<span class="material-symbols-outlined text-sm">thumb_up</span> 3
+                        </button>
+<button class="flex items-center gap-1.5 text-slate-500 font-bold text-xs">
+<span class="material-symbols-outlined text-sm">reply</span> Reply
+                        </button>
+</div>
+</div>
+</div>
+<!-- Nested Reply -->
+<div class="ml-6 mb-6 bg-white dark:bg-slate-900/40 rounded-xl border border-slate-200 dark:border-slate-800 p-4 shadow-sm relative">
+<div class="absolute left-[-20px] top-0 bottom-0 w-[2px] bg-slate-200 dark:bg-slate-800"></div>
+<div class="flex items-center gap-3 mb-3">
+<div class="h-8 w-8 rounded-full bg-center bg-cover border border-slate-200 dark:border-slate-700" data-alt="User avatar for Alex Chen" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBRNUoOBBTGhRntVNUKPL43y_uDfO5_B8EJbTjy_TQGEyF_r6SQJaaxZJe1v3_TE__P-v6b3L6oc0rYE7rOwFAFbFlFE1MQ9pXglml4qfc7ePtlabh8vU6dtrhlH2D9RpPxBTBAdY49PfxW5gnU6DHG7Z0M9BDNhkQ3JwsrqY_5ctaUePtebk6cVsiGvedtPlmhDsQBAu9-TOn0VaEOqrf1BbIUm0duZFomaEiEp4y9TXjySkJqcEgZLEk0170t2-29dDRFDMBZ8o0');"></div>
+<div>
+<div class="text-sm font-bold text-primary">Alex Chen (OP)</div>
+<div class="text-[11px] text-slate-500 uppercase font-medium">20 minutes ago</div>
+</div>
+</div>
+<p class="text-[14px] leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+                    Thanks David, I'm checking the p-delta settings now. Sarah, I'll increase the haunch depth by 50mm and re-run the calculation.
+                </p>
+<div class="flex items-center gap-4 border-t border-slate-100 dark:border-slate-700 pt-3">
+<button class="flex items-center gap-1.5 text-slate-500 font-bold text-xs">
+<span class="material-symbols-outlined text-sm">thumb_up</span> 1
+                    </button>
+<button class="flex items-center gap-1.5 text-slate-500 font-bold text-xs">
+<span class="material-symbols-outlined text-sm">reply</span> Reply
+                    </button>
+</div>
+</div>
+</div>
+</main>
+<!-- Sticky Bottom Input -->
+<div class="fixed bottom-0 left-0 right-0 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 p-3 pb-8 z-40">
+<div class="max-w-2xl mx-auto flex items-center gap-3">
+<button class="flex items-center justify-center h-10 w-10 text-slate-500 bg-slate-100 dark:bg-slate-800 rounded-full hover:bg-primary/20 hover:text-primary transition-all">
+<span class="material-symbols-outlined">add</span>
+</button>
+<div class="relative flex-1">
+<input class="w-full bg-slate-100 dark:bg-slate-800 border-none rounded-full px-4 py-2.5 text-[15px] focus:ring-2 focus:ring-primary placeholder:text-slate-500" placeholder="Type your response..." type="text"/>
+<button class="absolute right-3 top-1/2 -translate-y-1/2 flex items-center justify-center h-8 w-8 text-primary">
+<span class="material-symbols-outlined">image</span>
+</button>
+</div>
+<button class="flex items-center justify-center h-10 w-10 bg-primary text-white rounded-full shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+<script src="assets/nav-loader.js"></script>
+</body></html>

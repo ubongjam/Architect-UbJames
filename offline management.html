@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Offline Mode Management</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .fill-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#258cf4",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+    </style>
+    <link rel="stylesheet" href="assets/site.css"/>
+    </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white min-h-screen">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center p-4 justify-between max-w-md mx-auto">
+<div class="text-primary flex size-10 shrink-0 items-center justify-start cursor-pointer">
+<span class="material-symbols-outlined">arrow_back_ios</span>
+</div>
+<h1 class="text-lg font-bold leading-tight tracking-tight flex-1 text-center">Offline Management</h1>
+<div class="flex w-10 items-center justify-end">
+<button class="text-primary text-base font-bold leading-normal hover:opacity-80 transition-opacity">Done</button>
+</div>
+</div>
+</header>
+<main class="max-w-md mx-auto pb-24">
+<!-- Master Offline Toggle -->
+<section class="p-4">
+<div class="flex flex-col items-start justify-between gap-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 p-5 sm:flex-row sm:items-center">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary fill-icon">offline_pin</span>
+<p class="text-base font-bold">Enable Offline Mode</p>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Access core structural tools and documents without internet connection on-site.</p>
+</div>
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-slate-300 dark:bg-slate-700 p-0.5 has-[:checked]:justify-end has-[:checked]:bg-primary transition-all">
+<div class="h-full w-[27px] rounded-full bg-white shadow-md"></div>
+<input checked="" class="invisible absolute" type="checkbox"/>
+</label>
+</div>
+</section>
+<!-- Storage Progress Indicator -->
+<section class="px-4 py-2">
+<div class="flex flex-col gap-3 p-4 bg-white dark:bg-slate-900/30 rounded-xl border border-slate-200 dark:border-slate-800">
+<div class="flex gap-6 justify-between items-end">
+<p class="text-sm font-semibold uppercase tracking-wider text-slate-500">Device Storage</p>
+<p class="text-sm font-medium">1.2 GB <span class="text-slate-500">/ 14.5 GB</span></p>
+</div>
+<div class="h-2 rounded-full bg-slate-200 dark:bg-slate-800 overflow-hidden">
+<div class="h-full bg-primary" style="width: 12%;"></div>
+</div>
+<div class="flex justify-between items-center">
+<p class="text-slate-500 dark:text-slate-400 text-xs">13.3 GB Available</p>
+<span class="text-[10px] px-2 py-0.5 rounded bg-green-500/10 text-green-500 font-bold uppercase">Healthy</span>
+</div>
+</div>
+</section>
+<!-- Downloadable Content List -->
+<section class="mt-4">
+<h3 class="text-sm font-bold uppercase tracking-widest text-slate-500 px-6 mb-2">Downloadable Content</h3>
+<div class="divide-y divide-slate-100 dark:divide-slate-800">
+<!-- List Item 1: Design Guides -->
+<div class="flex items-center gap-4 px-6 min-h-[80px] py-3 justify-between hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors">
+<div class="flex items-center gap-4">
+<div class="flex size-6 items-center justify-center">
+<input checked="" class="h-5 w-5 rounded border-slate-300 dark:border-slate-600 bg-transparent text-primary focus:ring-primary focus:ring-offset-0 focus:border-primary focus:outline-none cursor-pointer" type="checkbox"/>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-base font-semibold leading-tight">Design Guides</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs leading-normal line-clamp-1">Sub-steel connection details and beam sizing</p>
+</div>
+</div>
+<button class="shrink-0 flex items-center justify-center rounded-lg h-8 px-3 bg-primary/10 text-primary text-xs font-bold uppercase tracking-wide hover:bg-primary/20 transition-colors">
+                        Update All
+                    </button>
+</div>
+<!-- List Item 2: Technical Standards (Active Download) -->
+<div class="flex flex-col px-6 py-4 bg-primary/5 dark:bg-primary/5">
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center gap-4">
+<div class="flex size-6 items-center justify-center">
+<input checked="" class="h-5 w-5 rounded border-slate-300 dark:border-slate-600 bg-transparent text-primary focus:ring-primary cursor-pointer" type="checkbox"/>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-base font-semibold leading-tight">Standard Reference PDFs</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs leading-normal">AISC 360-16, Eurocode 3 Part 1-8</p>
+</div>
+</div>
+<span class="text-primary text-xs font-bold animate-pulse">45%</span>
+</div>
+<div class="ml-10 h-1.5 rounded-full bg-slate-200 dark:bg-slate-800 overflow-hidden">
+<div class="h-full bg-primary" style="width: 45%;"></div>
+</div>
+</div>
+<!-- List Item 3: Technical Standards -->
+<div class="flex items-center gap-4 px-6 min-h-[80px] py-3 justify-between hover:bg-slate-50 dark:hover:bg-slate-800/30">
+<div class="flex items-center gap-4">
+<div class="flex size-6 items-center justify-center">
+<input class="h-5 w-5 rounded border-slate-300 dark:border-slate-600 bg-transparent text-primary focus:ring-primary cursor-pointer" type="checkbox"/>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-base font-semibold leading-tight">Technical Standards</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs leading-normal">Building codes &amp; regional steel amendments</p>
+</div>
+</div>
+<button class="shrink-0 flex items-center justify-center rounded-lg h-8 px-3 bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-bold uppercase tracking-wide">
+                        Download
+                    </button>
+</div>
+<!-- List Item 4: Saved Calculators -->
+<div class="flex items-center gap-4 px-6 min-h-[80px] py-3 justify-between hover:bg-slate-50 dark:hover:bg-slate-800/30">
+<div class="flex items-center gap-4">
+<div class="flex size-6 items-center justify-center">
+<input checked="" class="h-5 w-5 rounded border-slate-300 dark:border-slate-600 bg-transparent text-primary focus:ring-primary cursor-pointer" type="checkbox"/>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-base font-semibold leading-tight">Saved Calculators</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs leading-normal">Moment-connection &amp; load distribution models</p>
+</div>
+</div>
+<div class="shrink-0 text-green-500 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">check_circle</span>
+<span class="text-[10px] font-bold uppercase">Ready</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Bottom Smart Sync Panel -->
+<section class="fixed bottom-0 left-0 right-0 max-w-md mx-auto p-4 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-lg border-t border-slate-200 dark:border-slate-800">
+<div class="flex items-center justify-between gap-4">
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-primary">sync</span>
+<p class="text-sm font-bold">Smart Sync</p>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-[11px]">Auto-update over Wi-Fi only</p>
+</div>
+<label class="relative flex h-[24px] w-[42px] cursor-pointer items-center rounded-full border-none bg-slate-300 dark:bg-slate-700 p-0.5 has-[:checked]:justify-end has-[:checked]:bg-primary transition-all">
+<div class="h-full w-[20px] rounded-full bg-white shadow-sm"></div>
+<input checked="" class="invisible absolute" type="checkbox"/>
+</label>
+</div>
+</section>
+</main>
+<!-- Visual Polish: Content Gradient Decor -->
+<div class="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-md h-full pointer-events-none overflow-hidden -z-10 opacity-20">
+<div class="absolute top-[-10%] right-[-20%] w-[300px] h-[300px] rounded-full bg-primary blur-[120px]"></div>
+<div class="absolute bottom-[-5%] left-[-10%] w-[250px] h-[250px] rounded-full bg-blue-600 blur-[100px]"></div>
+</div>
+<script src="assets/nav-loader.js"></script>
+</body></html>

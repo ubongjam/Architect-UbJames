@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Section Comparison Results</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#258cf4",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk"],
+                        "mono": ["JetBrains Mono", "monospace"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .mono-val { font-family: 'JetBrains Mono', monospace; }
+        .property-row:nth-child(even) { background-color: rgba(255, 255, 255, 0.02); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+    </style>
+    <link rel="stylesheet" href="assets/site.css"/>
+    </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Top Navigation Bar -->
+<nav class="sticky top-0 z-50 bg-background-light dark:bg-background-dark border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center p-4 justify-between max-w-md mx-auto">
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined">arrow_back_ios_new</span>
+</button>
+<h1 class="text-lg font-bold tracking-tight">Section Comparison</h1>
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined">share</span>
+</button>
+</div>
+</nav>
+<main class="flex-1 overflow-y-auto pb-32">
+<!-- Visual Comparison Cards -->
+<div class="grid grid-cols-2 gap-3 p-4 max-w-md mx-auto">
+<div class="flex flex-col gap-3">
+<div class="w-full aspect-square bg-slate-100 dark:bg-[#1a2632] border border-slate-200 dark:border-slate-800 rounded-xl flex items-center justify-center overflow-hidden">
+<div class="w-full h-full bg-center bg-no-repeat bg-contain" data-alt="Technical cross-section diagram of a W12x26 steel beam profile" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAUN2JTWG1i7TAXChjN4mfVg4yN0yFR6sdbvfd5LE2W6IVy6esIxiVR26dOwVXq8CciRfQCG42NfY9E35GNV75kXrvGq93y9fN96iKmff78_SZdKVNvB0VuZ0GjLzJPJwnGoe8GBPai3zZaFPh3UEE9bKQGJgUYFwUrmA66x9KaKuOq6-o8BZILPcS3AkSjtndw60cypodUpqD9iFe64f-rz1B6ev5Aomllu3UZqEB8DaOrwMZcg459M87WbIR84HDr4wKho1KKWSM");'></div>
+</div>
+<div class="text-center">
+<p class="text-primary font-bold text-lg">W12x26</p>
+<p class="text-xs text-slate-500 uppercase tracking-widest">Section A</p>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<div class="w-full aspect-square bg-slate-100 dark:bg-[#1a2632] border border-slate-200 dark:border-slate-800 rounded-xl flex items-center justify-center overflow-hidden">
+<div class="w-full h-full bg-center bg-no-repeat bg-contain" data-alt="Technical cross-section diagram of a W14x22 steel beam profile" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC2ek0qd0i1kRk1l1g_k0IPHJYVGdj5TwKN20S4aTkGaLgUkVPQYQUCltvVydpNuusqhqSTN9eQBev1UcUkvDgmTx_QwY_eGRV4aRaTmEUK38Kgiw874nX0OQVaqwo_fmzzAVH5MCgWHJcdqUE1WGruDSoLTRMHkoyszATpi-a08wHLrIEwmCCYOT7mnvPvrAHZhF6wsNnREjKhHxBO_-Evb7xvLC4zjXcNs3yU4DAPVke22up48qm_foGwFQ_3lt7Fdhc1J8Hw0WQ");'></div>
+</div>
+<div class="text-center">
+<p class="text-primary font-bold text-lg">W14x22</p>
+<p class="text-xs text-slate-500 uppercase tracking-widest">Section B</p>
+</div>
+</div>
+</div>
+<div class="px-4 mb-2">
+<h2 class="text-sm font-semibold uppercase tracking-wider text-slate-500">Property Matrix</h2>
+</div>
+<!-- Comparison Table -->
+<div class="max-w-md mx-auto border-t border-slate-200 dark:border-slate-800">
+<!-- Weight Row (Lower is better) -->
+<div class="property-row flex items-center justify-between px-4 py-4 border-b border-slate-200 dark:border-slate-800">
+<div class="flex-1">
+<p class="mono-val text-lg">26.0</p>
+</div>
+<div class="flex-1 flex flex-col items-center">
+<span class="material-symbols-outlined text-slate-400 text-sm">weight</span>
+<p class="text-[10px] font-bold uppercase text-slate-500">Weight (lb/ft)</p>
+</div>
+<div class="flex-1 text-right relative">
+<div class="absolute -right-1 top-0 bg-green-500/10 text-green-500 px-1 rounded flex items-center gap-1">
+<p class="mono-val text-lg font-semibold">22.0</p>
+<span class="material-symbols-outlined text-xs">check_circle</span>
+</div>
+</div>
+</div>
+<!-- Area Row (Higher is better) -->
+<div class="property-row flex items-center justify-between px-4 py-4 border-b border-slate-200 dark:border-slate-800">
+<div class="flex-1 relative">
+<div class="absolute -left-1 top-0 bg-green-500/10 text-green-500 px-1 rounded flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">check_circle</span>
+<p class="mono-val text-lg font-semibold">7.65</p>
+</div>
+</div>
+<div class="flex-1 flex flex-col items-center">
+<span class="material-symbols-outlined text-slate-400 text-sm">square_foot</span>
+<p class="text-[10px] font-bold uppercase text-slate-500">Area (in²)</p>
+</div>
+<div class="flex-1 text-right">
+<p class="mono-val text-lg text-slate-400">6.49</p>
+</div>
+</div>
+<!-- Ix Row (Higher is better) -->
+<div class="property-row flex items-center justify-between px-4 py-4 border-b border-slate-200 dark:border-slate-800">
+<div class="flex-1 relative">
+<div class="absolute -left-1 top-0 bg-green-500/10 text-green-500 px-1 rounded flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">check_circle</span>
+<p class="mono-val text-lg font-semibold">204</p>
+</div>
+</div>
+<div class="flex-1 flex flex-col items-center">
+<span class="material-symbols-outlined text-slate-400 text-sm">align_vertical_center</span>
+<p class="text-[10px] font-bold uppercase text-slate-500">Ix (in⁴)</p>
+</div>
+<div class="flex-1 text-right">
+<p class="mono-val text-lg text-slate-400">199</p>
+</div>
+</div>
+<!-- Iy Row (Higher is better) -->
+<div class="property-row flex items-center justify-between px-4 py-4 border-b border-slate-200 dark:border-slate-800">
+<div class="flex-1 relative">
+<div class="absolute -left-1 top-0 bg-green-500/10 text-green-500 px-1 rounded flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">check_circle</span>
+<p class="mono-val text-lg font-semibold">17.3</p>
+</div>
+</div>
+<div class="flex-1 flex flex-col items-center">
+<span class="material-symbols-outlined text-slate-400 text-sm">align_horizontal_center</span>
+<p class="text-[10px] font-bold uppercase text-slate-500">Iy (in⁴)</p>
+</div>
+<div class="flex-1 text-right">
+<p class="mono-val text-lg text-slate-400">7.0</p>
+</div>
+</div>
+<!-- Sx Row -->
+<div class="property-row flex items-center justify-between px-4 py-4 border-b border-slate-200 dark:border-slate-800">
+<div class="flex-1 relative">
+<div class="absolute -left-1 top-0 bg-green-500/10 text-green-500 px-1 rounded flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">check_circle</span>
+<p class="mono-val text-lg font-semibold">33.4</p>
+</div>
+</div>
+<div class="flex-1 flex flex-col items-center">
+<span class="material-symbols-outlined text-slate-400 text-sm">view_agenda</span>
+<p class="text-[10px] font-bold uppercase text-slate-500">Sx (in³)</p>
+</div>
+<div class="flex-1 text-right">
+<p class="mono-val text-lg text-slate-400">29.0</p>
+</div>
+</div>
+<!-- Sy Row -->
+<div class="property-row flex items-center justify-between px-4 py-4 border-b border-slate-200 dark:border-slate-800">
+<div class="flex-1 relative">
+<div class="absolute -left-1 top-0 bg-green-500/10 text-green-500 px-1 rounded flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">check_circle</span>
+<p class="mono-val text-lg font-semibold">5.34</p>
+</div>
+</div>
+<div class="flex-1 flex flex-col items-center">
+<span class="material-symbols-outlined text-slate-400 text-sm">view_column</span>
+<p class="text-[10px] font-bold uppercase text-slate-500">Sy (in³)</p>
+</div>
+<div class="flex-1 text-right">
+<p class="mono-val text-lg text-slate-400">2.80</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Floating Footer Actions -->
+<div class="fixed bottom-0 left-0 right-0 p-4 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-t border-slate-200 dark:border-slate-800">
+<div class="max-w-md mx-auto flex flex-col gap-3">
+<button class="w-full bg-primary text-white py-4 rounded-xl font-bold text-base flex items-center justify-center gap-2 active:scale-[0.98] transition-transform">
+<span class="material-symbols-outlined">swap_horiz</span>
+                Switch Sections
+            </button>
+<button class="w-full bg-transparent border-2 border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 py-3 rounded-xl font-bold text-sm flex items-center justify-center gap-2 active:scale-[0.98] transition-transform">
+<span class="material-symbols-outlined">file_download</span>
+                Export Comparison (PDF)
+            </button>
+</div>
+</div>
+<script src="assets/nav-loader.js"></script>
+</body></html>

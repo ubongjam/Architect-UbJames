@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Professional Profile &amp; Progress</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#258cf4",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+    </style>
+    <link rel="stylesheet" href="assets/site.css"/>
+    </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white min-h-screen pb-24">
+<!-- Top Navigation Bar -->
+<div class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md px-4 py-4 border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-400">settings</span>
+<h2 class="text-lg font-bold tracking-tight">Profile</h2>
+<button class="flex items-center justify-center h-10 w-10 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-primary">edit</span>
+</button>
+</div>
+</div>
+<!-- Profile Header Section -->
+<div class="px-4 py-8 flex flex-col items-center text-center">
+<div class="relative mb-4">
+<div class="h-32 w-32 rounded-full border-4 border-primary/20 p-1">
+<div class="h-full w-full rounded-full bg-cover bg-center" data-alt="Professional portrait of a male structural engineer" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDqq88Gn-kopt_lTEIzSZxh_jIktvxNmpDkxPZp8IAOr7VqaQh-bs2g9PF_ATBu78d6LrdTPdV9MoWqc5wtFgmrIV_R0XdElIwK7ksMWDJfzVnlAkwu9BIG5u_LYAYip1H2DeJpiIg5ENR6cUdShP27oNRrV6Yc-1nVG9zLlHtBSI97aLEMvdEs3IJO5Oaf7aMpJD6_zE0EPqcE2ks5awLwvNfDEsNmuHT0ehiiwTftTqcm0tpv4hMQUwKvPI66QUQTmHRzJxyYTyo')">
+</div>
+</div>
+<div class="absolute bottom-1 right-1 bg-primary text-white p-1.5 rounded-full border-2 border-background-light dark:border-background-dark">
+<span class="material-symbols-outlined text-[16px] block">verified</span>
+</div>
+</div>
+<h1 class="text-2xl font-bold">Alex Chen</h1>
+<p class="text-slate-500 dark:text-slate-400 font-medium">Graduate Structural Engineer</p>
+<div class="flex items-center gap-2 mt-1 text-xs text-slate-400 uppercase tracking-widest font-semibold">
+<span class="material-symbols-outlined text-[14px]">calendar_today</span>
+            Member since Oct 2023
+        </div>
+</div>
+<!-- Learning Progress Card -->
+<div class="px-4 mb-8">
+<div class="bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl p-5 shadow-sm">
+<div class="flex items-center justify-between mb-4">
+<h3 class="font-bold text-lg">Overall Certification</h3>
+<span class="text-primary font-bold text-lg">68%</span>
+</div>
+<div class="w-full bg-slate-200 dark:bg-slate-800 h-3 rounded-full overflow-hidden mb-3">
+<div class="bg-primary h-full rounded-full" style="width: 68%;"></div>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400">12 of 18 sub-steel modules completed</p>
+</div>
+</div>
+<!-- Domain Charts (Grid) -->
+<div class="px-4 mb-8">
+<h3 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] pb-4">Skill Mastery</h3>
+<div class="grid grid-cols-3 gap-4">
+<!-- Codes Chart -->
+<div class="flex flex-col items-center bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl p-4">
+<div class="relative flex items-center justify-center mb-3">
+<svg class="w-16 h-16 transform -rotate-90">
+<circle class="text-slate-200 dark:text-slate-800" cx="32" cy="32" fill="transparent" r="28" stroke="currentColor" stroke-width="6"></circle>
+<circle class="text-primary" cx="32" cy="32" fill="transparent" r="28" stroke="currentColor" stroke-dasharray="175.9" stroke-dashoffset="26.4" stroke-width="6"></circle>
+</svg>
+<span class="absolute text-sm font-bold">85%</span>
+</div>
+<p class="text-[11px] font-bold text-slate-500 dark:text-slate-400 text-center uppercase tracking-tight">Design Codes</p>
+</div>
+<!-- Connections Chart -->
+<div class="flex flex-col items-center bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl p-4">
+<div class="relative flex items-center justify-center mb-3">
+<svg class="w-16 h-16 transform -rotate-90">
+<circle class="text-slate-200 dark:text-slate-800" cx="32" cy="32" fill="transparent" r="28" stroke="currentColor" stroke-width="6"></circle>
+<circle class="text-primary/60" cx="32" cy="32" fill="transparent" r="28" stroke="currentColor" stroke-dasharray="175.9" stroke-dashoffset="102" stroke-width="6"></circle>
+</svg>
+<span class="absolute text-sm font-bold">42%</span>
+</div>
+<p class="text-[11px] font-bold text-slate-500 dark:text-slate-400 text-center uppercase tracking-tight">Connections</p>
+</div>
+<!-- Calculations Chart -->
+<div class="flex flex-col items-center bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl p-4">
+<div class="relative flex items-center justify-center mb-3">
+<svg class="w-16 h-16 transform -rotate-90">
+<circle class="text-slate-200 dark:text-slate-800" cx="32" cy="32" fill="transparent" r="28" stroke="currentColor" stroke-width="6"></circle>
+<circle class="text-primary/80" cx="32" cy="32" fill="transparent" r="28" stroke="currentColor" stroke-dasharray="175.9" stroke-dashoffset="52.7" stroke-width="6"></circle>
+</svg>
+<span class="absolute text-sm font-bold">70%</span>
+</div>
+<p class="text-[11px] font-bold text-slate-500 dark:text-slate-400 text-center uppercase tracking-tight">Calculations</p>
+</div>
+</div>
+</div>
+<!-- Achievements Horizontal Scroll -->
+<div class="mb-8">
+<div class="flex items-center justify-between px-4 pb-4">
+<h3 class="text-lg font-bold">Achievements</h3>
+<button class="text-primary text-sm font-bold">View All</button>
+</div>
+<div class="flex gap-4 overflow-x-auto px-4 hide-scrollbar">
+<!-- Badge 1 -->
+<div class="flex flex-col items-center shrink-0 w-24">
+<div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-600 flex items-center justify-center mb-2 shadow-lg shadow-orange-900/20">
+<span class="material-symbols-outlined text-white text-3xl">calculate</span>
+</div>
+<p class="text-[11px] text-center font-bold leading-tight">Calc Pro</p>
+</div>
+<!-- Badge 2 -->
+<div class="flex flex-col items-center shrink-0 w-24">
+<div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-indigo-600 flex items-center justify-center mb-2 shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-white text-3xl">forum</span>
+</div>
+<p class="text-[11px] text-center font-bold leading-tight">Forum Contributor</p>
+</div>
+<!-- Badge 3 -->
+<div class="flex flex-col items-center shrink-0 w-24">
+<div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-400 to-teal-600 flex items-center justify-center mb-2 shadow-lg shadow-emerald-900/20">
+<span class="material-symbols-outlined text-white text-3xl">architecture</span>
+</div>
+<p class="text-[11px] text-center font-bold leading-tight">Drafting Expert</p>
+</div>
+<!-- Badge 4 -->
+<div class="flex flex-col items-center shrink-0 w-24 opacity-40 grayscale">
+<div class="w-16 h-16 rounded-2xl bg-slate-200 dark:bg-slate-800 flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-slate-400 text-3xl">emoji_events</span>
+</div>
+<p class="text-[11px] text-center font-bold leading-tight">Steel Master</p>
+</div>
+</div>
+</div>
+<!-- Saved for Later List -->
+<div class="px-4">
+<h3 class="text-lg font-bold pb-4">Saved for Later</h3>
+<div class="space-y-3">
+<!-- Item 1 -->
+<div class="flex items-center gap-4 p-3 bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-lg">
+<div class="h-12 w-12 rounded bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">menu_book</span>
+</div>
+<div class="flex-1">
+<h4 class="text-sm font-bold">Eurocode 3: Steel Design Guide</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400">Module 4 • PDF Document</p>
+</div>
+<button class="text-slate-400">
+<span class="material-symbols-outlined">bookmark_remove</span>
+</button>
+</div>
+<!-- Item 2 -->
+<div class="flex items-center gap-4 p-3 bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-lg">
+<div class="h-12 w-12 rounded bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">analytics</span>
+</div>
+<div class="flex-1">
+<h4 class="text-sm font-bold">Bolt Connection Shear Stress</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400">Forum Discussion • 12 replies</p>
+</div>
+<button class="text-slate-400">
+<span class="material-symbols-outlined">bookmark_remove</span>
+</button>
+</div>
+<!-- Item 3 -->
+<div class="flex items-center gap-4 p-3 bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-lg">
+<div class="h-12 w-12 rounded bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">play_circle</span>
+</div>
+<div class="flex-1">
+<h4 class="text-sm font-bold">Sub-steel Structure Stability</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400">Video Lecture • 14:02 min</p>
+</div>
+<button class="text-slate-400">
+<span class="material-symbols-outlined">bookmark_remove</span>
+</button>
+</div>
+</div>
+</div>
+<!-- iOS Bottom Navigation Bar -->
+<div class="fixed bottom-0 left-0 right-0 bg-white/80 dark:bg-background-dark/80 backdrop-blur-xl border-t border-slate-200 dark:border-slate-800 px-6 pt-3 pb-8 z-50">
+<div class="flex justify-between items-center max-w-md mx-auto">
+<div class="flex flex-col items-center text-slate-400">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-bold mt-1 uppercase tracking-tighter">Home</span>
+</div>
+<div class="flex flex-col items-center text-slate-400">
+<span class="material-symbols-outlined">school</span>
+<span class="text-[10px] font-bold mt-1 uppercase tracking-tighter">Learn</span>
+</div>
+<div class="flex flex-col items-center text-slate-400">
+<span class="material-symbols-outlined">construction</span>
+<span class="text-[10px] font-bold mt-1 uppercase tracking-tighter">Tools</span>
+</div>
+<div class="flex flex-col items-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="text-[10px] font-bold mt-1 uppercase tracking-tighter">Profile</span>
+</div>
+</div>
+</div>
+<script src="assets/nav-loader.js"></script>
+</body></html>

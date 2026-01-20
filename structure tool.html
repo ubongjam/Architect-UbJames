@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Structural Engineering Tools</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1152d4",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                        "card-dark": "#192233",
+                        "border-dark": "#324467",
+                        "text-muted": "#92a4c9"
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+    </style>
+    <link rel="stylesheet" href="assets/site.css"/>
+    </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white min-h-screen">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-border-dark">
+<div class="flex items-center p-4 justify-between max-w-md mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">engineering</span>
+<h1 class="text-lg font-bold leading-tight tracking-tight">Structural Tools</h1>
+</div>
+<div class="flex gap-2">
+<button class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-card-dark transition-colors">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-card-dark transition-colors">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+</div>
+</header>
+<main class="max-w-md mx-auto pb-24">
+<!-- Unit Switcher -->
+<div class="px-4 py-4">
+<div class="flex h-10 items-center justify-center rounded-lg bg-slate-200 dark:bg-card-dark p-1">
+<label class="flex cursor-pointer h-full grow items-center justify-center rounded-md px-2 has-[:checked]:bg-white dark:has-[:checked]:bg-background-dark has-[:checked]:shadow-sm text-slate-500 dark:text-text-muted has-[:checked]:text-primary dark:has-[:checked]:text-white text-sm font-semibold transition-all">
+<span>Metric (mm)</span>
+<input checked="" class="hidden" name="units" type="radio" value="metric"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center rounded-md px-2 has-[:checked]:bg-white dark:has-[:checked]:bg-background-dark has-[:checked]:shadow-sm text-slate-500 dark:text-text-muted has-[:checked]:text-primary dark:has-[:checked]:text-white text-sm font-semibold transition-all">
+<span>Imperial (in)</span>
+<input class="hidden" name="units" type="radio" value="imperial"/>
+</label>
+</div>
+</div>
+<!-- Section Header -->
+<div class="px-4 py-2">
+<h2 class="text-sm font-bold uppercase tracking-widest text-primary">Sub-Steel Calculators</h2>
+</div>
+<!-- Tools List / Accordions -->
+<div class="flex flex-col p-4 gap-4">
+<!-- Expanded Calculator Tool -->
+<div class="flex flex-col rounded-xl border-2 border-primary bg-white dark:bg-card-dark overflow-hidden shadow-lg shadow-primary/10">
+<div class="flex items-center justify-between p-4 bg-primary/5 border-b border-primary/10">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">grid_view</span>
+<p class="font-bold text-slate-900 dark:text-white">Section Property Calculator</p>
+</div>
+<span class="material-symbols-outlined text-primary">expand_less</span>
+</div>
+<div class="p-4 space-y-4">
+<!-- Diagram Placeholder -->
+<div class="flex justify-center py-4 bg-slate-100 dark:bg-background-dark/50 rounded-lg border border-dashed border-slate-300 dark:border-border-dark relative overflow-hidden">
+<!-- Abstract I-Beam representation -->
+<div class="w-16 h-24 border-x-4 border-y-[12px] border-primary/40 flex items-center justify-center">
+<div class="w-1 h-full bg-primary/40"></div>
+</div>
+<div class="absolute inset-0 flex items-center justify-center opacity-10 pointer-events-none">
+<span class="text-[80px] material-symbols-outlined">architecture</span>
+</div>
+</div>
+<!-- Input Grid -->
+<div class="grid grid-cols-2 gap-4">
+<label class="flex flex-col flex-1">
+<p class="text-slate-600 dark:text-text-muted text-xs font-bold uppercase mb-1">Height (h)</p>
+<div class="relative">
+<input class="w-full rounded-lg text-slate-900 dark:text-white border border-slate-200 dark:border-border-dark bg-slate-50 dark:bg-background-dark p-3 text-sm font-mono focus:ring-2 focus:ring-primary focus:border-primary outline-none" placeholder="0.00" type="number" value="200"/>
+<span class="absolute right-3 top-3 text-[10px] text-text-muted font-bold">MM</span>
+</div>
+</label>
+<label class="flex flex-col flex-1">
+<p class="text-slate-600 dark:text-text-muted text-xs font-bold uppercase mb-1">Width (b)</p>
+<div class="relative">
+<input class="w-full rounded-lg text-slate-900 dark:text-white border border-slate-200 dark:border-border-dark bg-slate-50 dark:bg-background-dark p-3 text-sm font-mono focus:ring-2 focus:ring-primary focus:border-primary outline-none" placeholder="0.00" type="number" value="100"/>
+<span class="absolute right-3 top-3 text-[10px] text-text-muted font-bold">MM</span>
+</div>
+</label>
+<label class="flex flex-col flex-1">
+<p class="text-slate-600 dark:text-text-muted text-xs font-bold uppercase mb-1">Flange (tf)</p>
+<div class="relative">
+<input class="w-full rounded-lg text-slate-900 dark:text-white border border-slate-200 dark:border-border-dark bg-slate-50 dark:bg-background-dark p-3 text-sm font-mono focus:ring-2 focus:ring-primary focus:border-primary outline-none" placeholder="0.00" type="number" value="12"/>
+<span class="absolute right-3 top-3 text-[10px] text-text-muted font-bold">MM</span>
+</div>
+</label>
+<label class="flex flex-col flex-1">
+<p class="text-slate-600 dark:text-text-muted text-xs font-bold uppercase mb-1">Web (tw)</p>
+<div class="relative">
+<input class="w-full rounded-lg text-slate-900 dark:text-white border border-slate-200 dark:border-border-dark bg-slate-50 dark:bg-background-dark p-3 text-sm font-mono focus:ring-2 focus:ring-primary focus:border-primary outline-none" placeholder="0.00" type="number" value="8"/>
+<span class="absolute right-3 top-3 text-[10px] text-text-muted font-bold">MM</span>
+</div>
+</label>
+</div>
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-lg shadow-md transition-all active:scale-[0.98] flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">calculate</span>
+                        Calculate Properties
+                    </button>
+<!-- Results Table -->
+<div class="mt-4 pt-4 border-t border-slate-200 dark:border-border-dark">
+<h4 class="text-xs font-bold uppercase text-primary mb-3">Calculated Results</h4>
+<div class="grid grid-cols-2 gap-px bg-slate-200 dark:bg-border-dark rounded-lg overflow-hidden border border-slate-200 dark:border-border-dark">
+<div class="bg-white dark:bg-background-dark p-3">
+<p class="text-[10px] text-text-muted font-bold uppercase">Area (A)</p>
+<p class="text-sm font-mono font-bold text-slate-900 dark:text-white">3,808.00 <span class="text-[10px] opacity-50">mm²</span></p>
+</div>
+<div class="bg-white dark:bg-background-dark p-3">
+<p class="text-[10px] text-text-muted font-bold uppercase">Inertia (Ix)</p>
+<p class="text-sm font-mono font-bold text-slate-900 dark:text-white">2.64e7 <span class="text-[10px] opacity-50">mm⁴</span></p>
+</div>
+<div class="bg-white dark:bg-background-dark p-3">
+<p class="text-[10px] text-text-muted font-bold uppercase">Modulus (Zx)</p>
+<p class="text-sm font-mono font-bold text-slate-900 dark:text-white">264,000 <span class="text-[10px] opacity-50">mm³</span></p>
+</div>
+<div class="bg-white dark:bg-background-dark p-3">
+<p class="text-[10px] text-text-muted font-bold uppercase">Weight</p>
+<p class="text-sm font-mono font-bold text-slate-900 dark:text-white">29.89 <span class="text-[10px] opacity-50">kg/m</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Collapsed Tool: Bolt Strength Checker -->
+<details class="group bg-white dark:bg-card-dark rounded-xl border border-slate-200 dark:border-border-dark overflow-hidden transition-all">
+<summary class="flex cursor-pointer items-center justify-between p-4 list-none">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-400">nat</span>
+<p class="font-semibold text-slate-700 dark:text-slate-200">Bolt Strength Checker</p>
+</div>
+<span class="material-symbols-outlined text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="px-4 pb-4">
+<p class="text-text-muted text-sm leading-relaxed">Check shear and tension capacities for high-strength bolts according to AISC/Eurocode standards.</p>
+</div>
+</details>
+<!-- Collapsed Tool: Load Combination Generator -->
+<details class="group bg-white dark:bg-card-dark rounded-xl border border-slate-200 dark:border-border-dark overflow-hidden transition-all">
+<summary class="flex cursor-pointer items-center justify-between p-4 list-none">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-400">layers</span>
+<p class="font-semibold text-slate-700 dark:text-slate-200">Load Combination Generator</p>
+</div>
+<span class="material-symbols-outlined text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="px-4 pb-4">
+<p class="text-text-muted text-sm leading-relaxed">Generate factored load combinations based on Dead, Live, Wind, and Seismic inputs.</p>
+</div>
+</details>
+<!-- Collapsed Tool: Weld Capacity -->
+<details class="group bg-white dark:bg-card-dark rounded-xl border border-slate-200 dark:border-border-dark overflow-hidden transition-all">
+<summary class="flex cursor-pointer items-center justify-between p-4 list-none">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-400">format_paint</span>
+<p class="font-semibold text-slate-700 dark:text-slate-200">Weld Capacity Calculator</p>
+</div>
+<span class="material-symbols-outlined text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="px-4 pb-4">
+<p class="text-text-muted text-sm leading-relaxed">Determine fillet and butt weld strengths for longitudinal and transverse loading conditions.</p>
+</div>
+</details>
+</div>
+<!-- Design Note -->
+<div class="px-4 py-4 text-center">
+<p class="text-xs text-text-muted italic">All calculations adhere to AISC 360-16 structural steel design specifications.</p>
+</div>
+</main>
+<!-- Bottom Navigation Bar (iOS Style) -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white/90 dark:bg-background-dark/90 backdrop-blur-lg border-t border-slate-200 dark:border-border-dark pb-6 pt-2">
+<div class="max-w-md mx-auto flex justify-around items-center">
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-bold uppercase">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined fill-1">handyman</span>
+<span class="text-[10px] font-bold uppercase">Tools</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="text-[10px] font-bold uppercase">Learn</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold uppercase">Profile</span>
+</button>
+</div>
+</nav>
+<script src="assets/nav-loader.js"></script>
+</body></html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Recent Activity History</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#258cf4",
+              "background-light": "#f5f7f8",
+              "background-dark": "#101922",
+            },
+            fontFamily: {
+              "display": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .timeline-line {
+            width: 2px;
+            background: #223649;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  <link rel="stylesheet" href="assets/site.css"/>
+  </head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen">
+<!-- Top Navigation Bar (iOS Style) -->
+<div class="sticky top-0 z-50 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md border-b border-gray-200 dark:border-[#223649]">
+<div class="flex items-center px-4 py-3 justify-between">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[28px]">chevron_left</span>
+<span class="text-primary text-lg">Back</span>
+</div>
+<h1 class="text-gray-900 dark:text-white text-lg font-bold tracking-tight">Recent Activity</h1>
+<div class="flex w-10 items-center justify-end">
+<button class="text-primary">
+<span class="material-symbols-outlined">filter_list</span>
+</button>
+</div>
+</div>
+</div>
+<main class="max-w-lg mx-auto pb-12">
+<!-- Filter Tabs -->
+<div class="px-4 pt-4">
+<div class="flex border-b border-gray-200 dark:border-[#223649] gap-6 overflow-x-auto no-scrollbar">
+<a class="flex flex-col items-center justify-center border-b-2 border-primary text-primary pb-3 pt-2" href="#">
+<p class="text-sm font-bold whitespace-nowrap">All History</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-transparent text-gray-500 dark:text-[#90adcb] pb-3 pt-2" href="#">
+<p class="text-sm font-medium whitespace-nowrap">Calculations</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-transparent text-gray-500 dark:text-[#90adcb] pb-3 pt-2" href="#">
+<p class="text-sm font-medium whitespace-nowrap">Shares</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-transparent text-gray-500 dark:text-[#90adcb] pb-3 pt-2" href="#">
+<p class="text-sm font-medium whitespace-nowrap">Social</p>
+</a>
+</div>
+</div>
+<!-- Section Header: Today -->
+<div class="px-4 py-6">
+<h3 class="text-gray-500 dark:text-[#90adcb] text-xs font-bold uppercase tracking-widest">Today</h3>
+</div>
+<!-- Timeline Section -->
+<div class="px-4">
+<!-- Entry 1: Calculation -->
+<div class="grid grid-cols-[40px_1fr] gap-x-2">
+<div class="flex flex-col items-center gap-1">
+<div class="flex items-center justify-center size-10 rounded-full bg-primary/10 border border-primary/20">
+<span class="material-symbols-outlined text-primary text-[20px]">bolt</span>
+</div>
+<div class="w-[2px] bg-gray-200 dark:bg-[#223649] h-full min-h-[40px]"></div>
+</div>
+<div class="flex flex-1 flex-col pb-8">
+<div class="flex justify-between items-start mb-2">
+<div>
+<p class="text-gray-900 dark:text-white text-base font-semibold leading-tight">Calculated Bolt Strength</p>
+<p class="text-gray-500 dark:text-[#90adcb] text-sm mt-1">Project: Warehouse expansion WP-01</p>
+</div>
+<p class="text-gray-400 dark:text-[#5a7b9c] text-xs">2h ago</p>
+</div>
+<div class="flex items-center gap-3 bg-white dark:bg-[#1a2632] p-3 rounded-lg border border-gray-100 dark:border-[#223649]">
+<div class="size-10 rounded bg-gray-100 dark:bg-[#223649] flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-gray-600 dark:text-white">functions</span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-gray-900 dark:text-white text-sm font-medium truncate">Bolt_Shear_Check.stc</p>
+<p class="text-primary text-xs font-bold">M24 Grade 8.8</p>
+</div>
+<button class="bg-primary/10 text-primary text-xs font-bold px-3 py-1.5 rounded-lg border border-primary/20">
+                            View
+                        </button>
+</div>
+</div>
+</div>
+<!-- Entry 2: Share -->
+<div class="grid grid-cols-[40px_1fr] gap-x-2">
+<div class="flex flex-col items-center gap-1">
+<div class="flex items-center justify-center size-10 rounded-full bg-emerald-500/10 border border-emerald-500/20">
+<span class="material-symbols-outlined text-emerald-500 text-[20px]">share</span>
+</div>
+<div class="w-[2px] bg-gray-200 dark:bg-[#223649] h-full min-h-[40px]"></div>
+</div>
+<div class="flex flex-1 flex-col pb-8">
+<div class="flex justify-between items-start mb-2">
+<div>
+<p class="text-gray-900 dark:text-white text-base font-semibold leading-tight">Shared Weld Design Results</p>
+<p class="text-gray-500 dark:text-[#90adcb] text-sm mt-1">Exported to Team BIM channel</p>
+</div>
+<p class="text-gray-400 dark:text-[#5a7b9c] text-xs">5h ago</p>
+</div>
+<div class="flex items-center gap-3 bg-white dark:bg-[#1a2632] p-3 rounded-lg border border-gray-100 dark:border-[#223649]">
+<div class="size-10 rounded bg-gray-100 dark:bg-[#223649] flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-gray-600 dark:text-white">picture_as_pdf</span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-gray-900 dark:text-white text-sm font-medium truncate">Weld_Joint_Report_V2.pdf</p>
+<p class="text-gray-400 dark:text-[#5a7b9c] text-xs">Size: 2.4 MB</p>
+</div>
+<span class="material-symbols-outlined text-gray-400">open_in_new</span>
+</div>
+</div>
+</div>
+<!-- Section Header: Yesterday -->
+<div class="grid grid-cols-[40px_1fr] gap-x-2 mb-6">
+<div class="flex flex-col items-center">
+<div class="w-[2px] bg-gray-200 dark:bg-[#223649] h-4"></div>
+<div class="size-2 rounded-full bg-gray-400"></div>
+</div>
+<div class="flex items-center pt-2">
+<h3 class="text-gray-500 dark:text-[#90adcb] text-xs font-bold uppercase tracking-widest">Yesterday</h3>
+</div>
+</div>
+<!-- Entry 3: Discussion -->
+<div class="grid grid-cols-[40px_1fr] gap-x-2">
+<div class="flex flex-col items-center gap-1">
+<div class="flex items-center justify-center size-10 rounded-full bg-amber-500/10 border border-amber-500/20">
+<span class="material-symbols-outlined text-amber-500 text-[20px]">forum</span>
+</div>
+<div class="w-[2px] bg-gray-200 dark:bg-[#223649] h-full min-h-[40px]"></div>
+</div>
+<div class="flex flex-1 flex-col pb-8">
+<div class="flex justify-between items-start mb-2">
+<div>
+<p class="text-gray-900 dark:text-white text-base font-semibold leading-tight">Joined Discussion on Eurocode 3</p>
+<p class="text-gray-500 dark:text-[#90adcb] text-sm mt-1">Topic: Partial safety factors for steel</p>
+</div>
+<p class="text-gray-400 dark:text-[#5a7b9c] text-xs">1d ago</p>
+</div>
+<div class="flex items-center gap-4 bg-primary/5 dark:bg-primary/10 p-4 rounded-xl border border-primary/20">
+<div class="flex-1">
+<p class="text-gray-800 dark:text-gray-200 text-sm italic leading-relaxed">
+                                "Has anyone encountered discrepancies between EC3-1-8 and AISC 360 for high-strength friction grip bolts?"
+                            </p>
+<div class="mt-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xs">chat_bubble</span>
+<span class="text-primary text-xs font-bold uppercase">12 Replies</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Entry 4: Training -->
+<div class="grid grid-cols-[40px_1fr] gap-x-2">
+<div class="flex flex-col items-center gap-1">
+<div class="flex items-center justify-center size-10 rounded-full bg-purple-500/10 border border-purple-500/20">
+<span class="material-symbols-outlined text-purple-500 text-[20px]">school</span>
+</div>
+</div>
+<div class="flex flex-1 flex-col">
+<div class="flex justify-between items-start mb-2">
+<div>
+<p class="text-gray-900 dark:text-white text-base font-semibold leading-tight">Completed Module: Plate Buckling</p>
+<p class="text-gray-500 dark:text-[#90adcb] text-sm mt-1">Structural Stability Essentials</p>
+</div>
+<p class="text-gray-400 dark:text-[#5a7b9c] text-xs">1d ago</p>
+</div>
+<div class="flex items-center gap-3 bg-white dark:bg-[#1a2632] p-3 rounded-lg border border-gray-100 dark:border-[#223649]">
+<div class="size-10 rounded-full overflow-hidden shrink-0 border-2 border-primary/30">
+<img class="w-full h-full object-cover" data-alt="Close up of steel beam structural joint" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB13GIv-LLcCDhfvRzBLfo-4K_lsHTJ3UCqh4H9UxO1RU6ci1gv0s-OSjb5WKay3TUxbt4B0wsP60Tcm1oWNbTXidISXFgftAubcM6Ven8dumf11qN6bKnQzJfP6GbJ6x0HjjGLjDGI-6eL7URi1N2ueYl9RgvC2ZuV1awnr1rgtfetEiPed42gv-Alh9eG4DugcC6_PJmSbdhlgAvDyXiaS6WjWwwIrvJNbdE4S7mwL2B2V-8j08ma3WFMsaEFizEra7zgz_gdgps"/>
+</div>
+<div class="flex-1">
+<div class="h-1.5 w-full bg-gray-200 dark:bg-[#223649] rounded-full overflow-hidden">
+<div class="bg-primary h-full w-full"></div>
+</div>
+<p class="text-emerald-500 text-[10px] font-bold uppercase mt-1">Score: 98% Pass</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Action -->
+<div class="mt-12 px-4 text-center">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">add</span>
+                Start New Calculation
+            </button>
+<p class="mt-4 text-gray-500 dark:text-[#5a7b9c] text-sm">Showing activities from last 30 days</p>
+</div>
+</main>
+<!-- Navigation Tab Bar (iOS style) -->
+<div class="fixed bottom-0 left-0 right-0 bg-white/90 dark:bg-background-dark/90 backdrop-blur-md border-t border-gray-200 dark:border-[#223649] pb-6 pt-2">
+<div class="flex justify-around items-center px-6">
+<div class="flex flex-col items-center gap-1 text-gray-400 dark:text-[#5a7b9c]">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-gray-400 dark:text-[#5a7b9c]">
+<span class="material-symbols-outlined">calculate</span>
+<span class="text-[10px] font-medium">Tools</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">history</span>
+<span class="text-[10px] font-bold">History</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-gray-400 dark:text-[#5a7b9c]">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-[10px] font-medium">Settings</span>
+</div>
+</div>
+</div>
+<script src="assets/nav-loader.js"></script>
+</body></html>

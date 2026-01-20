@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Submit Professional License</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1152d4",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                        "surface-dark": "#192233",
+                        "border-dark": "#324467"
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .ios-scrolling {
+            -webkit-overflow-scrolling: touch;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+    </style>
+    <link rel="stylesheet" href="assets/site.css"/>
+    </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white min-h-screen flex flex-col">
+<!-- Top Navigation Bar -->
+<nav class="sticky top-0 z-50 flex items-center bg-background-light dark:bg-background-dark px-4 py-4 border-b border-slate-200 dark:border-border-dark/30">
+<button class="flex items-center justify-center p-2 -ml-2">
+<span class="material-symbols-outlined text-primary">arrow_back_ios</span>
+</button>
+<h2 class="text-lg font-bold leading-tight tracking-tight flex-1 text-center pr-8">License Verification</h2>
+</nav>
+<main class="flex-1 overflow-y-auto ios-scrolling pb-32">
+<!-- Header Text Section -->
+<header class="px-4 pt-6 pb-4">
+<h1 class="text-2xl font-bold leading-tight mb-2">Professional Credentials</h1>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                Please provide your professional credentials to unlock advanced engineering tools and educational content.
+            </p>
+</header>
+<!-- Form Section -->
+<section class="px-4 space-y-5">
+<!-- License Number -->
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-medium text-slate-700 dark:text-slate-300">License Number</label>
+<input class="w-full rounded-lg border border-slate-300 dark:border-border-dark bg-white dark:bg-surface-dark px-4 py-3.5 text-base focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all placeholder:text-slate-400 dark:placeholder:text-[#92a4c9]" placeholder="e.g., 12345-67" type="text"/>
+</div>
+<!-- Issuing Body Selection -->
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-medium text-slate-700 dark:text-slate-300">Issuing Body / State Board</label>
+<div class="relative">
+<select class="w-full appearance-none rounded-lg border border-slate-300 dark:border-border-dark bg-white dark:bg-surface-dark px-4 py-3.5 text-base focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all">
+<option disabled="" selected="" value="">Select Board</option>
+<option value="ca">California BPELSG</option>
+<option value="ny">New York State Board</option>
+<option value="tx">Texas Board of PE</option>
+<option value="uk">Engineering Council (UK)</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">unfold_more</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<!-- Date of Issuance -->
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-medium text-slate-700 dark:text-slate-300">Date of Issuance</label>
+<input class="w-full rounded-lg border border-slate-300 dark:border-border-dark bg-white dark:bg-surface-dark px-4 py-3.5 text-base focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" type="date"/>
+</div>
+<!-- License Type -->
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-medium text-slate-700 dark:text-slate-300">License Type</label>
+<div class="relative">
+<select class="w-full appearance-none rounded-lg border border-slate-300 dark:border-border-dark bg-white dark:bg-surface-dark px-4 py-3.5 text-base focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all">
+<option value="pe">P.E.</option>
+<option value="se">S.E.</option>
+<option value="ceng">C.Eng</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">unfold_more</span>
+</div>
+</div>
+</div>
+<!-- Document Upload Zone -->
+<div class="flex flex-col gap-1.5 pt-2">
+<label class="text-sm font-medium text-slate-700 dark:text-slate-300">License Document</label>
+<div class="relative flex flex-col items-center justify-center w-full min-h-[160px] border-2 border-dashed border-primary/40 bg-primary/5 rounded-xl p-6 transition-colors hover:bg-primary/10 cursor-pointer">
+<span class="material-symbols-outlined text-primary text-4xl mb-2">cloud_upload</span>
+<p class="text-sm font-semibold text-primary">Upload Photo of License</p>
+<p class="text-xs text-slate-500 mt-1">PNG, JPG or PDF (Max. 10MB)</p>
+<input class="absolute inset-0 opacity-0 cursor-pointer" type="file"/>
+</div>
+</div>
+<!-- Security Information Box -->
+<div class="bg-primary/10 border border-primary/20 rounded-xl p-4 flex gap-3">
+<span class="material-symbols-outlined text-primary shrink-0">verified_user</span>
+<div>
+<h4 class="text-sm font-bold text-slate-900 dark:text-white mb-1">Secure Handling</h4>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-400">
+                        Your professional data is encrypted and handled according to high-security protocols. Verification typically takes 24-48 hours. We do not share your data with third parties.
+                    </p>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Sticky Button -->
+<div class="fixed bottom-0 left-0 right-0 p-4 bg-background-light dark:bg-background-dark border-t border-slate-200 dark:border-border-dark/30">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl shadow-lg transition-all active:scale-[0.98]">
+            Submit for Review
+        </button>
+</div>
+</script>
+</body></html>

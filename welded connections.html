@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Welded Connections Guide</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1152d4",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+    </style>
+    <link rel="stylesheet" href="assets/site.css"/>
+    </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white min-h-screen pb-24">
+<!-- Top Navigation Bar -->
+<nav class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center p-4 justify-between max-w-md mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined cursor-pointer text-slate-600 dark:text-slate-300">arrow_back_ios</span>
+<h1 class="text-lg font-bold tracking-tight">Welded Connections</h1>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined cursor-pointer text-slate-600 dark:text-slate-300">search</span>
+<span class="material-symbols-outlined cursor-pointer text-slate-600 dark:text-slate-300">bookmark</span>
+</div>
+</div>
+</nav>
+<main class="max-w-md mx-auto">
+<!-- Breadcrumbs / Tabs Navigation -->
+<div class="px-4 py-2">
+<div class="flex border-b border-slate-200 dark:border-slate-800 gap-6">
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-slate-500 dark:text-[#92a4c9] pb-3 pt-2" href="#">
+<p class="text-xs font-bold uppercase tracking-wider">Guides</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-slate-500 dark:text-[#92a4c9] pb-3 pt-2" href="#">
+<p class="text-xs font-bold uppercase tracking-wider">Connections</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-primary text-primary pb-3 pt-2" href="#">
+<p class="text-xs font-bold uppercase tracking-wider">Welded</p>
+</a>
+</div>
+</div>
+<!-- Hero / Header Image -->
+<div class="p-4">
+<div class="relative rounded-xl overflow-hidden bg-slate-200 dark:bg-slate-800 aspect-video group">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Technical cross-section diagram of a fillet weld" style='background-image: linear-gradient(to top, rgba(16, 22, 34, 0.9), transparent), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDe6gifeFsjLhjSUw38jpYCz970kVUVbIx6DYJXtdRUWL6gY6eWpclDrL83aOvyxnMrHvZi3GrobssnEOPdOTYPd1ZPGeqD5gSK7JwlCinf2GuHXLW3Xt4F3eoyTiYc-rIXZP4bFO66z3o5AmO7CoqYGAlUfJMHX8EQzjm7zOOR-J-ZKVKFC_CaiadzxJWL44XA1rACf3eOT0h0d1NFwfrpJXDtqiaYurDXr-E7xEDR7s0N2-UU_Xy-OM0bOwfZSf3W-rOUW9C89sQ");'>
+</div>
+<div class="absolute bottom-0 left-0 p-5 w-full">
+<span class="bg-primary text-[10px] font-bold px-2 py-1 rounded uppercase tracking-widest mb-2 inline-block">Technical Guide</span>
+<h2 class="text-2xl font-bold text-white leading-tight">Weld Type Classifications</h2>
+<p class="text-slate-300 text-sm mt-1">Fundamental geometry and symbols for steel fabrication.</p>
+</div>
+<div class="absolute top-4 right-4 bg-black/40 backdrop-blur-md p-2 rounded-full">
+<span class="material-symbols-outlined text-white text-sm">zoom_in</span>
+</div>
+</div>
+</div>
+<!-- Introduction -->
+<section class="px-4">
+<h2 class="text-xl font-bold leading-tight tracking-tight text-primary pb-2 pt-4">Introduction</h2>
+<p class="text-slate-600 dark:text-slate-300 text-base font-normal leading-relaxed pb-4">
+                Welded connections provide a continuous path for load transfer between structural steel members. Unlike bolted connections, welding relies on the fusion of base metal and filler material at the molecular level, creating a monolithic structure.
+            </p>
+</section>
+<!-- Theory Section -->
+<section class="px-4 py-2">
+<div class="bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl p-4">
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-primary">architecture</span>
+<h3 class="text-lg font-bold">Theory of Fusion</h3>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4">
+                    The effective throat of a weld is the minimum distance from the root of the weld to its face. For fillet welds, this is calculated as <span class="font-mono text-primary font-bold">0.707 × leg size (w)</span>.
+                </p>
+<!-- Formula Block -->
+<div class="bg-slate-100 dark:bg-background-dark p-4 rounded-lg border-l-4 border-primary">
+<p class="text-xs uppercase font-bold text-slate-500 mb-2">Effective Area Calculation</p>
+<code class="text-lg font-mono text-slate-800 dark:text-white">A_e = t_e × L</code>
+<p class="text-xs text-slate-500 mt-2">Where t_e is effective throat and L is effective length.</p>
+</div>
+</div>
+</section>
+<!-- Design Strength Section -->
+<section class="px-4 py-4">
+<h2 class="text-xl font-bold leading-tight tracking-tight text-primary pb-3">Design Strength</h2>
+<div class="grid grid-cols-1 gap-3">
+<div class="flex items-start gap-4 p-3 bg-white dark:bg-slate-900/50 rounded-lg border border-slate-200 dark:border-slate-800">
+<div class="bg-primary/10 p-2 rounded-lg">
+<span class="material-symbols-outlined text-primary">straighten</span>
+</div>
+<div>
+<h4 class="font-bold text-sm">Fillet Welds</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Design strength is based on the shear strength of the weld metal on the effective area.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-3 bg-white dark:bg-slate-900/50 rounded-lg border border-slate-200 dark:border-slate-800">
+<div class="bg-primary/10 p-2 rounded-lg">
+<span class="material-symbols-outlined text-primary">grid_view</span>
+</div>
+<div>
+<h4 class="font-bold text-sm">Groove Welds (CJP/PJP)</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Complete Joint Penetration (CJP) strength is typically limited by the base metal capacity.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Code References -->
+<section class="px-4 py-4">
+<h2 class="text-xl font-bold leading-tight tracking-tight text-primary pb-3">Code References</h2>
+<div class="flex flex-wrap gap-2">
+<div class="px-3 py-2 bg-slate-200 dark:bg-slate-800 rounded-lg flex items-center gap-2">
+<span class="text-xs font-bold">AISC 360-22</span>
+<span class="material-symbols-outlined text-xs">open_in_new</span>
+</div>
+<div class="px-3 py-2 bg-slate-200 dark:bg-slate-800 rounded-lg flex items-center gap-2">
+<span class="text-xs font-bold">EN 1993-1-8</span>
+<span class="material-symbols-outlined text-xs">open_in_new</span>
+</div>
+<div class="px-3 py-2 bg-slate-200 dark:bg-slate-800 rounded-lg flex items-center gap-2">
+<span class="text-xs font-bold">AWS D1.1</span>
+<span class="material-symbols-outlined text-xs">open_in_new</span>
+</div>
+</div>
+</section>
+<!-- Image Gallery / Technical Diagrams -->
+<section class="px-4 py-4">
+<h2 class="text-sm font-bold uppercase tracking-widest text-slate-500 pb-3">Technical Diagrams</h2>
+<div class="flex gap-4 overflow-x-auto pb-4 snap-x no-scrollbar">
+<div class="min-w-[280px] snap-center aspect-square bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 p-4 flex flex-col items-center justify-center text-center">
+<div class="w-full h-40 bg-slate-100 dark:bg-background-dark rounded-lg mb-3 flex items-center justify-center relative overflow-hidden">
+<div class="absolute inset-0 opacity-20 bg-primary/20" style="background-image: radial-gradient(#1152d4 1px, transparent 1px); background-size: 10px 10px;"></div>
+<span class="material-symbols-outlined text-4xl text-primary opacity-50">format_underlined</span>
+<!-- Mockup of a diagram -->
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-32 h-32 border-2 border-primary/40 flex items-end justify-start">
+<div class="w-16 h-16 bg-primary/20 border-t-2 border-r-2 border-primary"></div>
+</div>
+</div>
+</div>
+<p class="font-bold text-sm">Lap Joint (Fillet)</p>
+<p class="text-xs text-slate-500 mt-1">Commonly used for plates.</p>
+</div>
+<div class="min-w-[280px] snap-center aspect-square bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 p-4 flex flex-col items-center justify-center text-center">
+<div class="w-full h-40 bg-slate-100 dark:bg-background-dark rounded-lg mb-3 flex items-center justify-center relative overflow-hidden">
+<div class="absolute inset-0 opacity-20 bg-primary/20" style="background-image: radial-gradient(#1152d4 1px, transparent 1px); background-size: 10px 10px;"></div>
+<span class="material-symbols-outlined text-4xl text-primary opacity-50">splitscreen</span>
+<!-- Mockup of a diagram -->
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="flex gap-1 items-center">
+<div class="w-16 h-8 bg-slate-400/20 border-2 border-slate-400/50"></div>
+<div class="w-6 h-8 bg-primary/30 border-2 border-primary"></div>
+<div class="w-16 h-8 bg-slate-400/20 border-2 border-slate-400/50"></div>
+</div>
+</div>
+</div>
+<p class="font-bold text-sm">Butt Joint (Groove)</p>
+<p class="text-xs text-slate-500 mt-1">Full penetration strength.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Floating Action Button -->
+<div class="fixed bottom-8 right-6 z-50">
+<button class="flex items-center justify-center h-14 w-14 rounded-full bg-primary text-white shadow-xl shadow-primary/30 hover:scale-105 transition-transform active:scale-95">
+<span class="material-symbols-outlined">download</span>
+</button>
+<div class="absolute bottom-16 right-0 bg-slate-900 text-white text-[10px] font-bold py-1 px-2 rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">
+            PDF Guide
+        </div>
+</div>
+<!-- Bottom Tab Bar (iOS style) -->
+<div class="fixed bottom-0 left-0 right-0 h-20 bg-white/80 dark:bg-background-dark/80 backdrop-blur-xl border-t border-slate-200 dark:border-slate-800 flex items-center justify-around px-6 pb-4">
+<div class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="text-[10px] font-bold">Learn</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">calculate</span>
+<span class="text-[10px] font-medium">Tools</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">folder</span>
+<span class="text-[10px] font-medium">Projects</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-[10px] font-medium">Settings</span>
+</div>
+</div>
+<script src="assets/nav-loader.js"></script>
+</body></html>

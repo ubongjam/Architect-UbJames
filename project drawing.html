@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Project Drawing Gallery</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+    </style>
+    <link rel="stylesheet" href="assets/site.css"/>
+    </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-30 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center p-4 justify-between max-w-md mx-auto">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-2xl">arrow_back_ios_new</span>
+</div>
+<h1 class="text-lg font-bold leading-tight tracking-tight flex-1 text-center">Project Drawings</h1>
+<div class="flex size-10 items-center justify-center rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-2xl">more_vert</span>
+</div>
+</div>
+</header>
+<main class="max-w-md mx-auto pb-32">
+<!-- Search Bar Section -->
+<div class="px-4 py-4">
+<div class="relative flex items-center group">
+<div class="absolute left-4 text-slate-400 group-focus-within:text-primary transition-colors">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="w-full h-12 pl-12 pr-4 bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-800 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all placeholder:text-slate-500" placeholder="Search CAD snapshots..." type="text"/>
+</div>
+</div>
+<!-- Filter Chips Section -->
+<div class="flex gap-3 px-4 pb-4 overflow-x-auto hide-scrollbar">
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary px-5 text-white shadow-lg shadow-primary/20">
+<span class="text-sm font-semibold">Recent</span>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-5 text-slate-600 dark:text-slate-300 hover:border-primary transition-colors">
+<span class="text-sm font-semibold">Approved</span>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-5 text-slate-600 dark:text-slate-300 hover:border-primary transition-colors">
+<span class="text-sm font-semibold">Pending Review</span>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-5 text-slate-600 dark:text-slate-300 hover:border-primary transition-colors">
+<span class="text-sm font-semibold">Archived</span>
+</button>
+</div>
+<!-- Section Header -->
+<div class="px-4 flex items-center justify-between">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white">Active Components</h3>
+<span class="text-xs font-medium text-slate-500 uppercase tracking-widest">12 Drawings</span>
+</div>
+<!-- Image Grid -->
+<div class="grid grid-cols-2 gap-4 p-4">
+<!-- Drawing Card 1 -->
+<div class="flex flex-col gap-2 group cursor-pointer">
+<div class="relative aspect-square rounded-xl overflow-hidden bg-slate-200 dark:bg-slate-800 border border-slate-200 dark:border-slate-800 transition-transform active:scale-95">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="CAD drawing of steel base plate details with anchor bolts" style='background-image: linear-gradient(to top, rgba(16, 22, 34, 0.8) 0%, transparent 40%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuD8Y9-4KosPctZYbIxCzwY0Vvjw_Yd778y9SSTpRHqU2DOCFOry1htVYaxyUQARDRQkLqDGzESCKNyqBeQmhXFSGK3UBwtYlcVaj_qfi0LuL8EVMNgUFGVcRDDz9xMvqUcgc9LGVBfbt8G9Li9Q0cUXGzE_0Vu_XYz6SqMinwhYOk2YxN9xcg0ByJkSe2nS7v6h67Z7Y1LwBxrPSTRHc7T1kYbS1hhYrtUQAaH4rIhackZJHaH5Yps8ER4Eshs-Ws3edOEQXEIzO9I");'></div>
+<div class="absolute top-2 right-2 bg-primary px-2 py-0.5 rounded text-[10px] font-bold text-white uppercase tracking-wider">v1.2</div>
+<div class="absolute bottom-2 left-2 flex items-center gap-1.5">
+<span class="size-2 rounded-full bg-green-500"></span>
+<span class="text-[10px] text-white font-medium uppercase tracking-tighter">Approved</span>
+</div>
+</div>
+<div>
+<p class="text-sm font-bold text-slate-800 dark:text-slate-100 line-clamp-1">Base Plate Details</p>
+<p class="text-[11px] text-slate-500 font-medium">Modified 2h ago</p>
+</div>
+</div>
+<!-- Drawing Card 2 -->
+<div class="flex flex-col gap-2 group cursor-pointer">
+<div class="relative aspect-square rounded-xl overflow-hidden bg-slate-200 dark:bg-slate-800 border border-slate-200 dark:border-slate-800 transition-transform active:scale-95">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Architectural roof truss layout schematic" style='background-image: linear-gradient(to top, rgba(16, 22, 34, 0.8) 0%, transparent 40%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBopmyL7-DvHd8gQFKHhmh3628hBMw2_AG2ccu0S2u_Ov3qTx8b9iIX7_qFzVNkr26zXzEQzDsXLEHC1pM6igGgrPhy2SKFYmvufpypUsDN9XJbKsOgrGbUW8sGRO_O4HcFxQXpN9KxQ298-dX8GNTfAZCioD5mQdu8s8Un5EJ2PdsUZLiNZNGeLIVUsSBsWfcc657FnAIYrOzfRpx-Qr9fq5CAkYME6LRALkAW9KCBzjLjqGXQGnG2l5vswr98U8W4vFRvJKJrCZw");'></div>
+<div class="absolute top-2 right-2 bg-primary px-2 py-0.5 rounded text-[10px] font-bold text-white uppercase tracking-wider">v2.1</div>
+<div class="absolute bottom-2 left-2 flex items-center gap-1.5">
+<span class="size-2 rounded-full bg-amber-500"></span>
+<span class="text-[10px] text-white font-medium uppercase tracking-tighter">Review</span>
+</div>
+</div>
+<div>
+<p class="text-sm font-bold text-slate-800 dark:text-slate-100 line-clamp-1">Roof Truss Layout</p>
+<p class="text-[11px] text-slate-500 font-medium">Modified 5h ago</p>
+</div>
+</div>
+<!-- Drawing Card 3 -->
+<div class="flex flex-col gap-2 group cursor-pointer">
+<div class="relative aspect-square rounded-xl overflow-hidden bg-slate-200 dark:bg-slate-800 border border-slate-200 dark:border-slate-800 transition-transform active:scale-95">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Steel column splice connection detail blueprint" style='background-image: linear-gradient(to top, rgba(16, 22, 34, 0.8) 0%, transparent 40%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuAZceiSB2INAlfsK7xESTBlLDofUxPQEtm4_V20LHgTjxIAQKp_b49Oy-Pu8M56q-35I3Pw-ITCP5AfDTfDNBF3NyTk1rfNuusb17P_imuqYn1Vi976c7ADurpGkwjG5NXFhiyOgXAwJvPwEkrry3OdQyBjm8z9KpqBSSWuFofoOaZQPVjVKWxJWYxsVHPIZtgRpCW9-OQQ_7LI_R1OnOs1afC5-LQGj3OLmi3yA14ybDb1cZEyc3WQQO8opmHnhoeXeN0QczoUUKY");'></div>
+<div class="absolute top-2 right-2 bg-primary px-2 py-0.5 rounded text-[10px] font-bold text-white uppercase tracking-wider">v1.0</div>
+<div class="absolute bottom-2 left-2 flex items-center gap-1.5">
+<span class="size-2 rounded-full bg-green-500"></span>
+<span class="text-[10px] text-white font-medium uppercase tracking-tighter">Approved</span>
+</div>
+</div>
+<div>
+<p class="text-sm font-bold text-slate-800 dark:text-slate-100 line-clamp-1">Column Splice</p>
+<p class="text-[11px] text-slate-500 font-medium">Modified yesterday</p>
+</div>
+</div>
+<!-- Drawing Card 4 -->
+<div class="flex flex-col gap-2 group cursor-pointer">
+<div class="relative aspect-square rounded-xl overflow-hidden bg-slate-200 dark:bg-slate-800 border border-slate-200 dark:border-slate-800 transition-transform active:scale-95">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Foundation plan drawing with grade beams" style='background-image: linear-gradient(to top, rgba(16, 22, 34, 0.8) 0%, transparent 40%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDc-1Pn9pLkxr8w1M4K7BtYDSgv7TckVngMXWUdIUhVXSRjPCJghdA0BGVbtCa9TsaDbC9QCzXJNC9EUt88Jqsa6KFkuNIHmh_H7jt7BuMyObvfPeLQSd7JeTN-T4TLBgz90xgRhO-XTFHprtv58qNbQ6vaD5sTcfnWNKFus0W_7T3gscY5uU_uy6N-ufQj8ydLDQd-gufXCl4AZyMAkVXaUfzlUPKd2PnPfvn_vxmW9R37rFzIgS9KwsWXf0fsnlqt4roM-qHCZ7M");'></div>
+<div class="absolute top-2 right-2 bg-slate-500 px-2 py-0.5 rounded text-[10px] font-bold text-white uppercase tracking-wider">v0.8</div>
+<div class="absolute bottom-2 left-2 flex items-center gap-1.5">
+<span class="size-2 rounded-full bg-slate-400"></span>
+<span class="text-[10px] text-white font-medium uppercase tracking-tighter">Draft</span>
+</div>
+</div>
+<div>
+<p class="text-sm font-bold text-slate-800 dark:text-slate-100 line-clamp-1">Foundation Plan</p>
+<p class="text-[11px] text-slate-500 font-medium">Modified 2d ago</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Floating Action Button -->
+<button class="fixed bottom-24 right-6 size-14 bg-primary text-white rounded-full shadow-2xl shadow-primary/40 flex items-center justify-center hover:scale-105 active:scale-95 transition-all z-40">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+<!-- Bottom Navigation Bar (iOS Style) -->
+<nav class="fixed bottom-0 inset-x-0 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-t border-slate-200 dark:border-slate-800 z-50">
+<div class="max-w-md mx-auto flex items-center justify-around h-20 pb-4">
+<div class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-[10px] font-medium">Overview</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined">grid_view</span>
+<span class="text-[10px] font-bold">Gallery</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">architecture</span>
+<span class="text-[10px] font-medium">Tools</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-[10px] font-medium">Settings</span>
+</div>
+</div>
+</nav>
+<script src="assets/nav-loader.js"></script>
+</body></html>

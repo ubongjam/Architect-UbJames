@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Compare Sections Selection</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#144bb8",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#111621",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #344465;
+            border-radius: 10px;
+        }
+        .glass-panel {
+            background: rgba(26, 34, 50, 0.4);
+            backdrop-filter: blur(8px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+    </style>
+    <link rel="stylesheet" href="assets/site.css"/>
+    </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-white">
+<div class="relative flex h-screen w-full flex-col overflow-hidden">
+<!-- TopAppBar -->
+<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between border-b border-white/5">
+<div class="text-primary flex size-12 shrink-0 items-center cursor-pointer">
+<span class="material-symbols-outlined text-2xl">arrow_back_ios</span>
+</div>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Compare Sections</h2>
+<div class="flex w-12 items-center justify-end cursor-pointer">
+<p class="text-primary text-sm font-bold leading-normal tracking-[0.015em] shrink-0">Reset</p>
+</div>
+</div>
+<!-- Main Content (Scrollable) -->
+<div class="flex-1 overflow-y-auto custom-scrollbar">
+<div class="grid grid-cols-2 gap-px bg-white/5">
+<!-- Section A -->
+<div class="flex flex-col bg-background-light dark:bg-background-dark p-4">
+<h3 class="text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-widest pb-4">Section A</h3>
+<div class="flex flex-col gap-4">
+<!-- Selection Area Card -->
+<div class="group relative flex flex-col items-center justify-center aspect-[3/4] rounded-xl border-2 border-dashed border-slate-300 dark:border-slate-700 bg-slate-100/50 dark:bg-slate-800/30 hover:border-primary/50 transition-colors p-4">
+<div class="mb-4 flex size-14 items-center justify-center rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-3xl">add_box</span>
+</div>
+<p class="text-center text-slate-900 dark:text-white text-sm font-bold mb-6">Define Section</p>
+<div class="flex flex-col w-full gap-2">
+<button class="flex w-full cursor-pointer items-center justify-center rounded-lg h-9 px-3 bg-primary text-white text-xs font-medium transition-all active:scale-95">
+<span class="truncate">From Library</span>
+</button>
+<button class="flex w-full cursor-pointer items-center justify-center rounded-lg h-9 px-3 border border-slate-300 dark:border-slate-600 bg-transparent text-slate-700 dark:text-slate-300 text-xs font-medium transition-all active:scale-95">
+<span class="truncate">Custom Dim.</span>
+</button>
+</div>
+</div>
+<!-- Material Grade Field -->
+<div class="flex flex-col gap-1.5 pt-2">
+<p class="text-slate-700 dark:text-slate-300 text-xs font-medium">Material Grade</p>
+<div class="relative">
+<select class="form-input w-full appearance-none rounded-lg text-slate-900 dark:text-white focus:outline-0 focus:ring-0 border border-slate-300 dark:border-slate-700 bg-white dark:bg-[#1a2232] h-11 px-3 text-xs font-normal">
+<option>A36</option>
+<option>A572 Grade 50</option>
+<option>A992</option>
+<option>S235</option>
+<option>S355</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-slate-500">
+<span class="material-symbols-outlined text-lg">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section B -->
+<div class="flex flex-col bg-background-light dark:bg-background-dark p-4 border-l border-white/5">
+<h3 class="text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-widest pb-4">Section B</h3>
+<div class="flex flex-col gap-4">
+<!-- Selection Area Card -->
+<div class="group relative flex flex-col items-center justify-center aspect-[3/4] rounded-xl border-2 border-dashed border-slate-300 dark:border-slate-700 bg-slate-100/50 dark:bg-slate-800/30 hover:border-primary/50 transition-colors p-4">
+<div class="mb-4 flex size-14 items-center justify-center rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-3xl">add_box</span>
+</div>
+<p class="text-center text-slate-900 dark:text-white text-sm font-bold mb-6">Define Section</p>
+<div class="flex flex-col w-full gap-2">
+<button class="flex w-full cursor-pointer items-center justify-center rounded-lg h-9 px-3 bg-primary text-white text-xs font-medium transition-all active:scale-95">
+<span class="truncate">From Library</span>
+</button>
+<button class="flex w-full cursor-pointer items-center justify-center rounded-lg h-9 px-3 border border-slate-300 dark:border-slate-600 bg-transparent text-slate-700 dark:text-slate-300 text-xs font-medium transition-all active:scale-95">
+<span class="truncate">Custom Dim.</span>
+</button>
+</div>
+</div>
+<!-- Material Grade Field -->
+<div class="flex flex-col gap-1.5 pt-2">
+<p class="text-slate-700 dark:text-slate-300 text-xs font-medium">Material Grade</p>
+<div class="relative">
+<select class="form-input w-full appearance-none rounded-lg text-slate-900 dark:text-white focus:outline-0 focus:ring-0 border border-slate-300 dark:border-slate-700 bg-white dark:bg-[#1a2232] h-11 px-3 text-xs font-normal">
+<option>A36</option>
+<option>A572 Grade 50</option>
+<option>A992</option>
+<option>S235</option>
+<option>S355</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-slate-500">
+<span class="material-symbols-outlined text-lg">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Visualization Placeholder Area -->
+<div class="p-6">
+<div class="w-full h-48 rounded-xl bg-slate-200 dark:bg-slate-800/50 flex flex-col items-center justify-center gap-3 border border-slate-300 dark:border-slate-700/50 overflow-hidden relative">
+<!-- Abstract Background Pattern -->
+<div class="absolute inset-0 opacity-10" data-alt="Technical blueprint grid pattern background" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBe-Krcgvsge3ZYxyi8y5gdU9z66mAfRfSa3sfeJf5DgwNk7BduCRSO37j5JVNxYHZbk_xC2oLFVBBoZRXqoEA7YxpHW6ORnksbiRcErh32sHCOmpJkE35jaU_z4jzqqOVNjjs9UetT1-q_sBkz6ZriDeBKoJcgehC0u7v-MtP-YWtpIVyYHMSmPhdQ3z1C_r_My0CYc2E522BpCnAveX-W0_DRzuM8D2_KqT_hsp1kvau9jG307-OfzGwosDl3iFrxdBsYo1Up_EM");'></div>
+<span class="material-symbols-outlined text-4xl text-slate-400 dark:text-slate-600">compare_arrows</span>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium text-center px-8">Define both sections to preview side-by-side profile geometry</p>
+</div>
+</div>
+<div class="h-24"></div> <!-- Spacer for fixed button -->
+</div>
+<!-- Sticky Footer Action -->
+<div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background-light dark:from-background-dark via-background-light/95 dark:via-background-dark/95 to-transparent">
+<button class="flex w-full items-center justify-center gap-3 rounded-xl bg-primary h-14 px-6 text-white text-base font-bold shadow-lg shadow-primary/20 transition-all active:scale-[0.98]">
+<span class="material-symbols-outlined">analytics</span>
+<span>Compare Now</span>
+</button>
+<!-- iOS Home Indicator Spacer -->
+<div class="h-4"></div>
+</div>
+</div>
+<script src="assets/nav-loader.js"></script>
+</body></html>

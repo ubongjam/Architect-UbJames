@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Calculation Entry Details</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Space+Mono&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1152d4",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "mono": ["Space Mono", "monospace"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .mono-value {
+            font-family: 'Space Mono', monospace;
+        }
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+    </style>
+    <link rel="stylesheet" href="assets/site.css"/>
+    </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white antialiased">
+<div class="fixed top-0 left-0 right-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center p-4 justify-between max-w-md mx-auto">
+<div class="flex size-10 shrink-0 items-center justify-center cursor-pointer">
+<span class="material-symbols-outlined">arrow_back_ios</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-tight flex-1 text-center">Calculation Details</h2>
+<div class="flex w-10 items-center justify-end">
+<button class="flex cursor-pointer items-center justify-center rounded-lg h-10 w-10 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-primary">share</span>
+</button>
+</div>
+</div>
+</div>
+<main class="pt-20 pb-44 max-w-md mx-auto px-4">
+<div class="mb-6">
+<div class="flex items-center gap-2 mb-1">
+<span class="bg-primary/10 text-primary text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">Project ID: PRJ-2024-082</span>
+</div>
+<h1 class="text-2xl font-bold">Standard I-Beam Analysis</h1>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Performed on Main Structural Frame A</p>
+</div>
+<div class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 mb-6 shadow-sm">
+<div class="relative h-48 w-full flex items-center justify-center bg-slate-50 dark:bg-slate-950 p-6 border-b border-slate-100 dark:border-slate-800">
+<div class="relative w-24 h-32 border-4 border-primary/40 rounded-sm flex flex-col justify-between items-center">
+<div class="w-full h-6 bg-primary/20 border-b-2 border-primary"></div>
+<div class="w-3 h-full bg-primary/20 border-x-2 border-primary"></div>
+<div class="w-full h-6 bg-primary/20 border-t-2 border-primary"></div>
+</div>
+<div class="absolute bottom-4 left-4">
+<p class="text-[10px] font-medium text-primary uppercase tracking-widest">Input Section</p>
+<h3 class="text-lg font-bold">W12 x 26</h3>
+</div>
+</div>
+<div class="p-4">
+<div class="flex items-center justify-between mb-3">
+<h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest">Input Parameters</h4>
+<span class="text-[10px] text-slate-400 font-mono">Unit: Metric</span>
+</div>
+<div class="grid grid-cols-2 gap-x-6 gap-y-3">
+<div>
+<p class="text-[10px] text-slate-500 mb-0.5">Height (h)</p>
+<p class="font-mono text-sm font-semibold">312.0 mm</p>
+</div>
+<div>
+<p class="text-[10px] text-slate-500 mb-0.5">Width (b)</p>
+<p class="font-mono text-sm font-semibold">165.0 mm</p>
+</div>
+<div>
+<p class="text-[10px] text-slate-500 mb-0.5">Web (tw)</p>
+<p class="font-mono text-sm font-semibold">5.8 mm</p>
+</div>
+<div>
+<p class="text-[10px] text-slate-500 mb-0.5">Flange (tf)</p>
+<p class="font-mono text-sm font-semibold">9.7 mm</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mb-6">
+<h3 class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">history</span>
+                Audit Trail
+            </h3>
+<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden">
+<div class="p-4 space-y-4">
+<div class="flex items-start gap-3">
+<div class="mt-1 size-2 rounded-full bg-green-500"></div>
+<div class="flex-1">
+<div class="flex justify-between items-baseline">
+<p class="text-sm font-semibold">Created</p>
+<p class="text-[10px] font-mono text-slate-400">OCT 12, 14:32</p>
+</div>
+<p class="text-xs text-slate-500">Calculation generated by User ID: #9921</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="mt-1 size-2 rounded-full bg-primary"></div>
+<div class="flex-1">
+<div class="flex justify-between items-baseline">
+<p class="text-sm font-semibold">Exported as PDF</p>
+<p class="text-[10px] font-mono text-slate-400">OCT 12, 14:35</p>
+</div>
+<p class="text-xs text-slate-500">Sent to engineering-team@firm.com</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="mt-1 size-2 rounded-full bg-slate-300 dark:bg-slate-700"></div>
+<div class="flex-1">
+<div class="flex justify-between items-baseline">
+<p class="text-sm font-semibold">Last Viewed</p>
+<p class="text-[10px] font-mono text-slate-400">TODAY, 09:12</p>
+</div>
+<p class="text-xs text-slate-500">Reviewed on iPhone 15 Pro</p>
+</div>
+</div>
+</div>
+<div class="bg-slate-50 dark:bg-slate-950 px-4 py-2 border-t border-slate-100 dark:border-slate-800">
+<p class="text-[10px] text-slate-400 flex items-center gap-1 uppercase tracking-tighter">
+<span class="material-symbols-outlined text-xs">verified</span>
+                        Hash: 8d29fb1...a9e2
+                    </p>
+</div>
+</div>
+</div>
+<div>
+<div class="flex items-center justify-between mb-3">
+<h3 class="text-sm font-bold text-slate-400 uppercase tracking-widest">Saved Results</h3>
+<span class="text-[10px] text-primary font-bold">LATEST RECORD</span>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div class="bg-slate-100 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-800 p-3 rounded-lg">
+<p class="text-slate-500 text-[10px] font-medium uppercase">Area (A)</p>
+<p class="mono-value font-bold">49.35 <span class="text-[8px] opacity-60">CM²</span></p>
+</div>
+<div class="bg-slate-100 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-800 p-3 rounded-lg">
+<p class="text-slate-500 text-[10px] font-medium uppercase">Inertia (Ix)</p>
+<p class="mono-value font-bold">8491.1 <span class="text-[8px] opacity-60">CM⁴</span></p>
+</div>
+</div>
+</div>
+</main>
+<div class="fixed bottom-0 left-0 right-0 p-4 bg-background-light/95 dark:bg-background-dark/95 border-t border-slate-200 dark:border-slate-800 backdrop-blur-md">
+<div class="max-w-md mx-auto flex flex-col gap-3">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl shadow-lg transition-transform active:scale-[0.98] flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-xl">refresh</span>
+                Re-calculate with Inputs
+            </button>
+<button class="w-full border border-slate-300 dark:border-slate-700 bg-transparent hover:bg-slate-100 dark:hover:bg-slate-800 font-semibold py-3 rounded-xl transition-colors flex items-center justify-center gap-2 text-red-500 dark:text-red-400">
+<span class="material-symbols-outlined text-xl">delete_outline</span>
+                Delete Record
+            </button>
+<div class="h-4"></div>
+</div>
+</div>
+
+<script src="assets/nav-loader.js"></script>
+</body></html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Subscription Management</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Space+Mono&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ff6b00", // Safety Orange
+                        "navy": "#0a192f",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#0a0f18",
+                        "slate-card": "#161e2d",
+                        "slate-border": "#2d3748"
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "mono": ["Space Mono", "monospace"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        :root {
+            --safety-orange: #ff6b00;
+            --navy-deep: #0a192f;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .mono-value {
+            font-family: 'Space Mono', monospace;
+        }
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+    </style>
+    <link rel="stylesheet" href="assets/site.css"/>
+    </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased min-h-screen">
+<header class="fixed top-0 left-0 right-0 z-50 bg-background-light/90 dark:bg-background-dark/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-md mx-auto px-4 h-16 flex items-center">
+<button class="p-2 -ml-2 text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined">arrow_back_ios</span>
+</button>
+<h1 class="text-xl font-bold tracking-tight ml-2">Subscription</h1>
+</div>
+</header>
+<main class="pt-20 pb-24 max-w-md mx-auto px-4 space-y-8">
+<section>
+<p class="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400 mb-3">Current Plan</p>
+<div class="bg-gradient-to-br from-navy to-slate-card rounded-2xl border border-primary/20 p-5 shadow-lg relative overflow-hidden">
+<div class="absolute -right-4 -top-4 size-24 bg-primary/10 rounded-full blur-2xl"></div>
+<div class="flex justify-between items-start relative z-10">
+<div>
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-primary/20 border border-primary/30 mb-2">
+<span class="size-1.5 rounded-full bg-primary"></span>
+<span class="text-[10px] font-bold text-primary uppercase">Active</span>
+</div>
+<h2 class="text-2xl font-bold text-white">Pro Annual</h2>
+<p class="text-slate-400 text-sm mt-1">Structural Engineering Suite</p>
+</div>
+<div class="text-right">
+<p class="text-white font-bold text-xl">$199.99</p>
+<p class="text-[10px] text-slate-400 uppercase tracking-wider">Per Year</p>
+</div>
+</div>
+<div class="mt-6 flex items-center justify-between border-t border-slate-700/50 pt-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-slate-400 text-lg">event_repeat</span>
+<span class="text-xs text-slate-300">Renews on Oct 12, 2024</span>
+</div>
+<span class="text-[10px] font-bold text-primary px-2 py-1 bg-primary/10 rounded uppercase">Best Value</span>
+</div>
+</div>
+</section>
+<section>
+<p class="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400 mb-3">Manage Plan</p>
+<div class="space-y-3">
+<button class="w-full text-left bg-white dark:bg-slate-card rounded-xl border border-slate-200 dark:border-slate-800 p-4 flex items-center justify-between group active:scale-[0.99] transition-all">
+<div class="flex items-center gap-4">
+<div class="size-10 flex items-center justify-center rounded-lg bg-indigo-500/10 text-indigo-500">
+<span class="material-symbols-outlined">corporate_fare</span>
+</div>
+<div>
+<h3 class="text-sm font-bold dark:text-white">Upgrade to Enterprise</h3>
+<p class="text-xs text-slate-500">Multi-user licensing &amp; PDF branding</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary">chevron_right</span>
+</button>
+<button class="w-full text-left bg-white dark:bg-slate-card rounded-xl border border-slate-200 dark:border-slate-800 p-4 flex items-center justify-between group active:scale-[0.99] transition-all">
+<div class="flex items-center gap-4">
+<div class="size-10 flex items-center justify-center rounded-lg bg-emerald-500/10 text-emerald-500">
+<span class="material-symbols-outlined">calendar_month</span>
+</div>
+<div>
+<h3 class="text-sm font-bold dark:text-white">Switch to Monthly</h3>
+<p class="text-xs text-slate-500">$19.99/mo · Flexible cancellation</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary">chevron_right</span>
+</button>
+<button class="w-full text-left bg-white dark:bg-slate-card rounded-xl border border-slate-200 dark:border-slate-800 p-4 flex items-center justify-between group active:scale-[0.99] transition-all">
+<div class="flex items-center gap-4">
+<div class="size-10 flex items-center justify-center rounded-lg bg-red-500/10 text-red-500">
+<span class="material-symbols-outlined">cancel</span>
+</div>
+<div>
+<h3 class="text-sm font-bold dark:text-white">Cancel Subscription</h3>
+<p class="text-xs text-slate-500">Access remains until end of period</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-400 group-hover:text-red-500">chevron_right</span>
+</button>
+</div>
+</section>
+<section>
+<p class="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400 mb-3">Payment Method</p>
+<div class="bg-white dark:bg-slate-card rounded-xl border border-slate-200 dark:border-slate-800 p-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-12 h-8 bg-slate-100 dark:bg-navy rounded flex items-center justify-center border border-slate-200 dark:border-slate-700">
+<svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M15 10C15 11.1 14.1 12 13 12C11.9 12 11 11.1 11 10C11 8.9 11.9 8 13 8C14.1 8 15 8.9 15 10Z" fill="#EB001B"></path>
+<path d="M11 10C11 11.1 10.1 12 9 12C7.9 12 7 11.1 7 10C7 8.9 7.9 8 9 8C10.1 8 11 8.9 11 10Z" fill="#F79E1B"></path>
+<path d="M11 10C11 11.1 10.1 12 9 12C8.6 12 8.2 11.9 7.9 11.7C8.6 11.1 9 10.1 9 9.1C9 8.1 8.6 7.1 7.9 6.4C8.2 6.2 8.6 6.1 9 6.1C10.1 6.1 11 7 11 8.1V10Z" fill="#FF5F00"></path>
+</svg>
+</div>
+<div>
+<p class="text-sm font-bold dark:text-white uppercase tracking-wider font-mono">•••• 4242</p>
+<p class="text-[10px] text-slate-500">Mastercard · Expires 12/26</p>
+</div>
+</div>
+<button class="text-xs font-bold text-primary bg-primary/10 px-3 py-1.5 rounded-lg active:scale-95 transition-transform">
+                        Edit
+                    </button>
+</div>
+</div>
+</section>
+<div class="text-center pt-4">
+<p class="text-xs text-slate-500">Having trouble with your subscription?</p>
+<button class="mt-2 text-xs font-bold text-slate-400 underline underline-offset-4">Contact Billing Support</button>
+</div>
+</main>
+<nav class="fixed bottom-0 left-0 right-0 bg-background-light/95 dark:bg-background-dark/95 border-t border-slate-200 dark:border-slate-800 backdrop-blur-md pb-8">
+<div class="max-w-md mx-auto flex justify-around items-center h-16">
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">calculate</span>
+<span class="text-[10px] font-medium">Tools</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">history</span>
+<span class="text-[10px] font-medium">History</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">folder</span>
+<span class="text-[10px] font-medium">Projects</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined font-bold" style="font-variation-settings: 'FILL' 1">person</span>
+<span class="text-[10px] font-bold">Account</span>
+</button>
+</div>
+</nav>
+
+<script src="assets/nav-loader.js"></script>
+</body></html>
