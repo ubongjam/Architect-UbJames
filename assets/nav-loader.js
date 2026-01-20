@@ -73,36 +73,12 @@
     document.body.insertBefore(nav, document.body.firstChild);
   }
 
-  function buildFooter() {
-    if (document.getElementById('site-footer')) return;
-    const footer = document.createElement('footer');
-    footer.id = 'site-footer';
-    footer.className = 'site-footer';
-    const container = document.createElement('div');
-    container.className = 'site-container';
-
-    const links = document.createElement('div');
-    links.className = 'links';
-    pages.slice(0,8).forEach(p => {
-      const a = document.createElement('a');
-      a.href = p.href;
-      a.textContent = p.title;
-      links.appendChild(a);
-    });
-
-    const copy = document.createElement('div');
-    copy.textContent = '© ' + new Date().getFullYear() + ' Architect — All rights reserved.';
-
-    container.appendChild(links);
-    container.appendChild(copy);
-    footer.appendChild(container);
-    document.body.appendChild(footer);
-  }
+  // Footer intentionally not generated to avoid bottom navigation bars.
 
   function init() {
     ensureCSS();
     buildNav();
-    buildFooter();
+    // footer omitted per preference to remove bottom nav
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
